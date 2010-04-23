@@ -1,0 +1,6 @@
+[submodule "lib/oauth-objc"]
+	path = lib/oauth-objc
+	url = git@github.com:scrumers/oauth-objc.git
+[submodule "lib/fbconnect-objc"]
+	path = lib/fbconnect-objc
+	url = git@github.com:scrumers/fbconnect-objc.git

@@ -1,0 +1,537 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 45;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		4317EFED1181DB510045FF78 /* CloudKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 4317EFEC1181DB510045FF78 /* CloudKit.h */; };
+		4317F0031181DB850045FF78 /* CKAuthenticationEngine.h in Headers */ = {isa = PBXBuildFile; fileRef = 4317EFEE1181DB850045FF78 /* CKAuthenticationEngine.h */; };
+		4317F0041181DB850045FF78 /* CKCloudKitManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 4317EFEF1181DB850045FF78 /* CKCloudKitManager.h */; };
+		4317F0051181DB850045FF78 /* CKHTTPBasicAuthenticationEngine.h in Headers */ = {isa = PBXBuildFile; fileRef = 4317EFF01181DB850045FF78 /* CKHTTPBasicAuthenticationEngine.h */; };
+		4317F0061181DB850045FF78 /* CKInstanciationEngine.h in Headers */ = {isa = PBXBuildFile; fileRef = 4317EFF11181DB850045FF78 /* CKInstanciationEngine.h */; };
+		4317F0071181DB850045FF78 /* CKJSONEngine.h in Headers */ = {isa = PBXBuildFile; fileRef = 4317EFF21181DB850045FF78 /* CKJSONEngine.h */; };
+		4317F0081181DB850045FF78 /* CKOAuthEngine.h in Headers */ = {isa = PBXBuildFile; fileRef = 4317EFF31181DB850045FF78 /* CKOAuthEngine.h */; };
+		4317F0091181DB850045FF78 /* CKRequestManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 4317EFF41181DB850045FF78 /* CKRequestManager.h */; };
+		4317F00A1181DB850045FF78 /* CKRequestOperation.h in Headers */ = {isa = PBXBuildFile; fileRef = 4317EFF51181DB850045FF78 /* CKRequestOperation.h */; };
+		4317F00B1181DB850045FF78 /* CKRESTEngine.h in Headers */ = {isa = PBXBuildFile; fileRef = 4317EFF61181DB850045FF78 /* CKRESTEngine.h */; };
+		4317F00C1181DB850045FF78 /* CKSerializationEngine.h in Headers */ = {isa = PBXBuildFile; fileRef = 4317EFF71181DB850045FF78 /* CKSerializationEngine.h */; };
+		4317F00D1181DB850045FF78 /* NSData+CloudKitAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = 4317EFF81181DB850045FF78 /* NSData+CloudKitAdditions.h */; };
+		4317F00E1181DB850045FF78 /* NSString+InflectionSupport.h in Headers */ = {isa = PBXBuildFile; fileRef = 4317EFF91181DB850045FF78 /* NSString+InflectionSupport.h */; };
+		4317F00F1181DB850045FF78 /* CKCloudKitManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 4317EFFA1181DB850045FF78 /* CKCloudKitManager.m */; };
+		4317F0101181DB850045FF78 /* CKHTTPBasicAuthenticationEngine.m in Sources */ = {isa = PBXBuildFile; fileRef = 4317EFFB1181DB850045FF78 /* CKHTTPBasicAuthenticationEngine.m */; };
+		4317F0111181DB850045FF78 /* CKJSONEngine.m in Sources */ = {isa = PBXBuildFile; fileRef = 4317EFFC1181DB850045FF78 /* CKJSONEngine.m */; };
+		4317F0121181DB850045FF78 /* CKOAuthEngine.m in Sources */ = {isa = PBXBuildFile; fileRef = 4317EFFD1181DB850045FF78 /* CKOAuthEngine.m */; };
+		4317F0131181DB850045FF78 /* CKRequestManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 4317EFFE1181DB850045FF78 /* CKRequestManager.m */; };
+		4317F0141181DB850045FF78 /* CKRequestOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 4317EFFF1181DB850045FF78 /* CKRequestOperation.m */; };
+		4317F0151181DB850045FF78 /* CKRESTEngine.m in Sources */ = {isa = PBXBuildFile; fileRef = 4317F0001181DB850045FF78 /* CKRESTEngine.m */; };
+		4317F0161181DB850045FF78 /* NSData+CloudKitAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 4317F0011181DB850045FF78 /* NSData+CloudKitAdditions.m */; };
+		4317F0171181DB850045FF78 /* NSString+InflectionSupport.m in Sources */ = {isa = PBXBuildFile; fileRef = 4317F0021181DB850045FF78 /* NSString+InflectionSupport.m */; };
+		4317F1391181E2480045FF78 /* libOAuthConsumer.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4317F0F11181E0C70045FF78 /* libOAuthConsumer.a */; };
+		4317F13A1181E2510045FF78 /* libFBPlatform.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4317F0E91181E0B80045FF78 /* libFBPlatform.a */; };
+		4378EF7A1181D6AA004697B8 /* CloudKit_Prefix.pch in Headers */ = {isa = PBXBuildFile; fileRef = 4378EF791181D6AA004697B8 /* CloudKit_Prefix.pch */; };
+		AACBBE4A0F95108600F1A2B1 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AACBBE490F95108600F1A2B1 /* Foundation.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		4317F0E81181E0B80045FF78 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 43A20FE9116DDC3800BA930A /* FBConnect.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = BE61A71B0DE2551300D4F7B9 /* libFBPlatform.a */;
+			remoteInfo = FBPlatform;
+		};
+		4317F0F01181E0C70045FF78 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 43A20D3C116DC1D700BA930A /* OAuthConsumer.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = D2AAC07E0554694100DB518D /* libOAuthConsumer.a */;
+			remoteInfo = OAuthConsumer;
+		};
+		4317F1291181E22F0045FF78 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 43A20FE9116DDC3800BA930A /* FBConnect.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = BE61A71A0DE2551300D4F7B9 /* FBPlatform */;
+			remoteInfo = FBPlatform;
+		};
+		4317F12B1181E2320045FF78 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 43A20D3C116DC1D700BA930A /* OAuthConsumer.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = D2AAC07D0554694100DB518D /* OAuthConsumer */;
+			remoteInfo = OAuthConsumer;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		4317EFEC1181DB510045FF78 /* CloudKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CloudKit.h; path = ../../src/CloudKit/CloudKit.h; sourceTree = SOURCE_ROOT; };
+		4317EFEE1181DB850045FF78 /* CKAuthenticationEngine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CKAuthenticationEngine.h; path = ../../src/CKAuthenticationEngine.h; sourceTree = SOURCE_ROOT; };
+		4317EFEF1181DB850045FF78 /* CKCloudKitManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CKCloudKitManager.h; path = ../../src/CKCloudKitManager.h; sourceTree = SOURCE_ROOT; };
+		4317EFF01181DB850045FF78 /* CKHTTPBasicAuthenticationEngine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CKHTTPBasicAuthenticationEngine.h; path = ../../src/CKHTTPBasicAuthenticationEngine.h; sourceTree = SOURCE_ROOT; };
+		4317EFF11181DB850045FF78 /* CKInstanciationEngine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CKInstanciationEngine.h; path = ../../src/CKInstanciationEngine.h; sourceTree = SOURCE_ROOT; };
+		4317EFF21181DB850045FF78 /* CKJSONEngine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CKJSONEngine.h; path = ../../src/CKJSONEngine.h; sourceTree = SOURCE_ROOT; };
+		4317EFF31181DB850045FF78 /* CKOAuthEngine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CKOAuthEngine.h; path = ../../src/CKOAuthEngine.h; sourceTree = SOURCE_ROOT; };
+		4317EFF41181DB850045FF78 /* CKRequestManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CKRequestManager.h; path = ../../src/CKRequestManager.h; sourceTree = SOURCE_ROOT; };
+		4317EFF51181DB850045FF78 /* CKRequestOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CKRequestOperation.h; path = ../../src/CKRequestOperation.h; sourceTree = SOURCE_ROOT; };
+		4317EFF61181DB850045FF78 /* CKRESTEngine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CKRESTEngine.h; path = ../../src/CKRESTEngine.h; sourceTree = SOURCE_ROOT; };
+		4317EFF71181DB850045FF78 /* CKSerializationEngine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CKSerializationEngine.h; path = ../../src/CKSerializationEngine.h; sourceTree = SOURCE_ROOT; };
+		4317EFF81181DB850045FF78 /* NSData+CloudKitAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSData+CloudKitAdditions.h"; path = "../../src/NSData+CloudKitAdditions.h"; sourceTree = SOURCE_ROOT; };
+		4317EFF91181DB850045FF78 /* NSString+InflectionSupport.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSString+InflectionSupport.h"; path = "../../src/NSString+InflectionSupport.h"; sourceTree = SOURCE_ROOT; };
+		4317EFFA1181DB850045FF78 /* CKCloudKitManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CKCloudKitManager.m; path = ../../src/CKCloudKitManager.m; sourceTree = SOURCE_ROOT; };
+		4317EFFB1181DB850045FF78 /* CKHTTPBasicAuthenticationEngine.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CKHTTPBasicAuthenticationEngine.m; path = ../../src/CKHTTPBasicAuthenticationEngine.m; sourceTree = SOURCE_ROOT; };
+		4317EFFC1181DB850045FF78 /* CKJSONEngine.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CKJSONEngine.m; path = ../../src/CKJSONEngine.m; sourceTree = SOURCE_ROOT; };
+		4317EFFD1181DB850045FF78 /* CKOAuthEngine.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CKOAuthEngine.m; path = ../../src/CKOAuthEngine.m; sourceTree = SOURCE_ROOT; };
+		4317EFFE1181DB850045FF78 /* CKRequestManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CKRequestManager.m; path = ../../src/CKRequestManager.m; sourceTree = SOURCE_ROOT; };
+		4317EFFF1181DB850045FF78 /* CKRequestOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CKRequestOperation.m; path = ../../src/CKRequestOperation.m; sourceTree = SOURCE_ROOT; };
+		4317F0001181DB850045FF78 /* CKRESTEngine.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CKRESTEngine.m; path = ../../src/CKRESTEngine.m; sourceTree = SOURCE_ROOT; };
+		4317F0011181DB850045FF78 /* NSData+CloudKitAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSData+CloudKitAdditions.m"; path = "../../src/NSData+CloudKitAdditions.m"; sourceTree = SOURCE_ROOT; };
+		4317F0021181DB850045FF78 /* NSString+InflectionSupport.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSString+InflectionSupport.m"; path = "../../src/NSString+InflectionSupport.m"; sourceTree = SOURCE_ROOT; };
+		4378EF791181D6AA004697B8 /* CloudKit_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CloudKit_Prefix.pch; sourceTree = "<group>"; };
+		43A20D3C116DC1D700BA930A /* OAuthConsumer.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = OAuthConsumer.xcodeproj; path = "../../lib/oauth-objc/platform/iPhone/OAuthConsumer.xcodeproj"; sourceTree = SOURCE_ROOT; };
+		43A20FE9116DDC3800BA930A /* FBConnect.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = FBConnect.xcodeproj; path = "../../lib/fbconnect-objc/platform/iPhone/FBConnect.xcodeproj"; sourceTree = SOURCE_ROOT; };
+		AACBBE490F95108600F1A2B1 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		D2AAC07E0554694100DB518D /* libCloudKit.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libCloudKit.a; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		D2AAC07C0554694100DB518D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AACBBE4A0F95108600F1A2B1 /* Foundation.framework in Frameworks */,
+				4317F1391181E2480045FF78 /* libOAuthConsumer.a in Frameworks */,
+				4317F13A1181E2510045FF78 /* libFBPlatform.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		034768DFFF38A50411DB9C8B /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				D2AAC07E0554694100DB518D /* libCloudKit.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		0867D691FE84028FC02AAC07 /* CloudKit */ = {
+			isa = PBXGroup;
+			children = (
+				4317EFEC1181DB510045FF78 /* CloudKit.h */,
+				08FB77AEFE84172EC02AAC07 /* Classes */,
+				32C88DFF0371C24200C91783 /* Other Sources */,
+				0867D69AFE84028FC02AAC07 /* Frameworks */,
+				034768DFFF38A50411DB9C8B /* Products */,
+			);
+			name = CloudKit;
+			sourceTree = "<group>";
+		};
+		0867D69AFE84028FC02AAC07 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				AACBBE490F95108600F1A2B1 /* Foundation.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		08FB77AEFE84172EC02AAC07 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				4317EFEF1181DB850045FF78 /* CKCloudKitManager.h */,
+				4317EFF41181DB850045FF78 /* CKRequestManager.h */,
+				4317EFF51181DB850045FF78 /* CKRequestOperation.h */,
+				4317EFFA1181DB850045FF78 /* CKCloudKitManager.m */,
+				4317EFFE1181DB850045FF78 /* CKRequestManager.m */,
+				4317EFFF1181DB850045FF78 /* CKRequestOperation.m */,
+				43A20CF0116DC0DA00BA930A /* Utils */,
+				43A20CE0116DC0DA00BA930A /* Authentication engines */,
+				43A20CC5116DC0DA00BA930A /* Serialization engines */,
+				43A20FD1116DD82600BA930A /* Instanciation engines */,
+			);
+			name = Classes;
+			sourceTree = "<group>";
+		};
+		32C88DFF0371C24200C91783 /* Other Sources */ = {
+			isa = PBXGroup;
+			children = (
+				4378EF791181D6AA004697B8 /* CloudKit_Prefix.pch */,
+			);
+			name = "Other Sources";
+			sourceTree = "<group>";
+		};
+		4317F0E51181E0B80045FF78 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				4317F0E91181E0B80045FF78 /* libFBPlatform.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		4317F0ED1181E0C70045FF78 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				4317F0F11181E0C70045FF78 /* libOAuthConsumer.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		4378EF511181CE09004697B8 /* SOAP */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = SOAP;
+			sourceTree = "<group>";
+		};
+		43A20CC5116DC0DA00BA930A /* Serialization engines */ = {
+			isa = PBXGroup;
+			children = (
+				4317EFF71181DB850045FF78 /* CKSerializationEngine.h */,
+				43A20DA1116DC5A400BA930A /* JSON */,
+				43A20DA2116DC5B000BA930A /* XML */,
+			);
+			name = "Serialization engines";
+			sourceTree = "<group>";
+		};
+		43A20CE0116DC0DA00BA930A /* Authentication engines */ = {
+			isa = PBXGroup;
+			children = (
+				4317EFEE1181DB850045FF78 /* CKAuthenticationEngine.h */,
+				43A20CE9116DC0DA00BA930A /* FBConnect */,
+				43A20CE5116DC0DA00BA930A /* OAuth */,
+				43A20CE2116DC0DA00BA930A /* HTTP Basic */,
+			);
+			name = "Authentication engines";
+			sourceTree = "<group>";
+		};
+		43A20CE2116DC0DA00BA930A /* HTTP Basic */ = {
+			isa = PBXGroup;
+			children = (
+				4317EFF01181DB850045FF78 /* CKHTTPBasicAuthenticationEngine.h */,
+				4317EFFB1181DB850045FF78 /* CKHTTPBasicAuthenticationEngine.m */,
+			);
+			name = "HTTP Basic";
+			sourceTree = "<group>";
+		};
+		43A20CE5116DC0DA00BA930A /* OAuth */ = {
+			isa = PBXGroup;
+			children = (
+				4317EFF31181DB850045FF78 /* CKOAuthEngine.h */,
+				4317EFFD1181DB850045FF78 /* CKOAuthEngine.m */,
+				43A21086116DEB2B00BA930A /* Library */,
+			);
+			name = OAuth;
+			sourceTree = "<group>";
+		};
+		43A20CE9116DC0DA00BA930A /* FBConnect */ = {
+			isa = PBXGroup;
+			children = (
+				43A2107F116DEB2000BA930A /* Library */,
+			);
+			name = FBConnect;
+			sourceTree = "<group>";
+		};
+		43A20CF0116DC0DA00BA930A /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				43A20CF1116DC0DA00BA930A /* Extensions */,
+			);
+			name = Utils;
+			sourceTree = "<group>";
+		};
+		43A20CF1116DC0DA00BA930A /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				4317EFF81181DB850045FF78 /* NSData+CloudKitAdditions.h */,
+				4317EFF91181DB850045FF78 /* NSString+InflectionSupport.h */,
+				4317F0011181DB850045FF78 /* NSData+CloudKitAdditions.m */,
+				4317F0021181DB850045FF78 /* NSString+InflectionSupport.m */,
+			);
+			name = Extensions;
+			sourceTree = "<group>";
+		};
+		43A20DA1116DC5A400BA930A /* JSON */ = {
+			isa = PBXGroup;
+			children = (
+				4317EFF21181DB850045FF78 /* CKJSONEngine.h */,
+				4317EFFC1181DB850045FF78 /* CKJSONEngine.m */,
+				43A2108A116DEB3900BA930A /* Library */,
+			);
+			name = JSON;
+			sourceTree = "<group>";
+		};
+		43A20DA2116DC5B000BA930A /* XML */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = XML;
+			sourceTree = "<group>";
+		};
+		43A20FD1116DD82600BA930A /* Instanciation engines */ = {
+			isa = PBXGroup;
+			children = (
+				4317EFF11181DB850045FF78 /* CKInstanciationEngine.h */,
+				4378EF511181CE09004697B8 /* SOAP */,
+				43A20FD4116DD8F900BA930A /* REST */,
+			);
+			name = "Instanciation engines";
+			sourceTree = "<group>";
+		};
+		43A20FD4116DD8F900BA930A /* REST */ = {
+			isa = PBXGroup;
+			children = (
+				4317EFF61181DB850045FF78 /* CKRESTEngine.h */,
+				4317F0001181DB850045FF78 /* CKRESTEngine.m */,
+			);
+			name = REST;
+			sourceTree = "<group>";
+		};
+		43A2107F116DEB2000BA930A /* Library */ = {
+			isa = PBXGroup;
+			children = (
+				43A20FE9116DDC3800BA930A /* FBConnect.xcodeproj */,
+			);
+			name = Library;
+			sourceTree = "<group>";
+		};
+		43A21086116DEB2B00BA930A /* Library */ = {
+			isa = PBXGroup;
+			children = (
+				43A20D3C116DC1D700BA930A /* OAuthConsumer.xcodeproj */,
+			);
+			name = Library;
+			sourceTree = "<group>";
+		};
+		43A2108A116DEB3900BA930A /* Library */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Library;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		D2AAC07A0554694100DB518D /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4378EF7A1181D6AA004697B8 /* CloudKit_Prefix.pch in Headers */,
+				4317EFED1181DB510045FF78 /* CloudKit.h in Headers */,
+				4317F0031181DB850045FF78 /* CKAuthenticationEngine.h in Headers */,
+				4317F0041181DB850045FF78 /* CKCloudKitManager.h in Headers */,
+				4317F0051181DB850045FF78 /* CKHTTPBasicAuthenticationEngine.h in Headers */,
+				4317F0061181DB850045FF78 /* CKInstanciationEngine.h in Headers */,
+				4317F0071181DB850045FF78 /* CKJSONEngine.h in Headers */,
+				4317F0081181DB850045FF78 /* CKOAuthEngine.h in Headers */,
+				4317F0091181DB850045FF78 /* CKRequestManager.h in Headers */,
+				4317F00A1181DB850045FF78 /* CKRequestOperation.h in Headers */,
+				4317F00B1181DB850045FF78 /* CKRESTEngine.h in Headers */,
+				4317F00C1181DB850045FF78 /* CKSerializationEngine.h in Headers */,
+				4317F00D1181DB850045FF78 /* NSData+CloudKitAdditions.h in Headers */,
+				4317F00E1181DB850045FF78 /* NSString+InflectionSupport.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		D2AAC07D0554694100DB518D /* CloudKit */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1DEB921E08733DC00010E9CD /* Build configuration list for PBXNativeTarget "CloudKit" */;
+			buildPhases = (
+				D2AAC07A0554694100DB518D /* Headers */,
+				D2AAC07B0554694100DB518D /* Sources */,
+				D2AAC07C0554694100DB518D /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				4317F12A1181E22F0045FF78 /* PBXTargetDependency */,
+				4317F12C1181E2320045FF78 /* PBXTargetDependency */,
+			);
+			name = CloudKit;
+			productName = CloudKit;
+			productReference = D2AAC07E0554694100DB518D /* libCloudKit.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		0867D690FE84028FC02AAC07 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				ORGANIZATIONNAME = r;
+			};
+			buildConfigurationList = 1DEB922208733DC00010E9CD /* Build configuration list for PBXProject "CloudKit" */;
+			compatibilityVersion = "Xcode 3.1";
+			hasScannedForEncodings = 1;
+			mainGroup = 0867D691FE84028FC02AAC07 /* CloudKit */;
+			productRefGroup = 034768DFFF38A50411DB9C8B /* Products */;
+			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = 4317F0E51181E0B80045FF78 /* Products */;
+					ProjectRef = 43A20FE9116DDC3800BA930A /* FBConnect.xcodeproj */;
+				},
+				{
+					ProductGroup = 4317F0ED1181E0C70045FF78 /* Products */;
+					ProjectRef = 43A20D3C116DC1D700BA930A /* OAuthConsumer.xcodeproj */;
+				},
+			);
+			projectRoot = "";
+			targets = (
+				D2AAC07D0554694100DB518D /* CloudKit */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		4317F0E91181E0B80045FF78 /* libFBPlatform.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libFBPlatform.a;
+			remoteRef = 4317F0E81181E0B80045FF78 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		4317F0F11181E0C70045FF78 /* libOAuthConsumer.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libOAuthConsumer.a;
+			remoteRef = 4317F0F01181E0C70045FF78 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
+
+/* Begin PBXSourcesBuildPhase section */
+		D2AAC07B0554694100DB518D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4317F00F1181DB850045FF78 /* CKCloudKitManager.m in Sources */,
+				4317F0101181DB850045FF78 /* CKHTTPBasicAuthenticationEngine.m in Sources */,
+				4317F0111181DB850045FF78 /* CKJSONEngine.m in Sources */,
+				4317F0121181DB850045FF78 /* CKOAuthEngine.m in Sources */,
+				4317F0131181DB850045FF78 /* CKRequestManager.m in Sources */,
+				4317F0141181DB850045FF78 /* CKRequestOperation.m in Sources */,
+				4317F0151181DB850045FF78 /* CKRESTEngine.m in Sources */,
+				4317F0161181DB850045FF78 /* NSData+CloudKitAdditions.m in Sources */,
+				4317F0171181DB850045FF78 /* NSString+InflectionSupport.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		4317F12A1181E22F0045FF78 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = FBPlatform;
+			targetProxy = 4317F1291181E22F0045FF78 /* PBXContainerItemProxy */;
+		};
+		4317F12C1181E2320045FF78 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = OAuthConsumer;
+			targetProxy = 4317F12B1181E2320045FF78 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		1DEB921F08733DC00010E9CD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				COPY_PHASE_STRIP = NO;
+				DSTROOT = /tmp/CloudKit.dst;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_FIX_AND_CONTINUE = YES;
+				GCC_MODEL_TUNING = G5;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = CloudKit_Prefix.pch;
+				INSTALL_PATH = /usr/local/lib;
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/../lib/YAJL\"",
+				);
+				PRODUCT_NAME = CloudKit;
+			};
+			name = Debug;
+		};
+		1DEB922008733DC00010E9CD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				DSTROOT = /tmp/CloudKit.dst;
+				GCC_MODEL_TUNING = G5;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = CloudKit_Prefix.pch;
+				INSTALL_PATH = /usr/local/lib;
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/../lib/YAJL\"",
+				);
+				PRODUCT_NAME = CloudKit;
+			};
+			name = Release;
+		};
+		1DEB922308733DC00010E9CD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				GCC_C_LANGUAGE_STANDARD = c99;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = "./../../lib/**";
+				OTHER_LDFLAGS = (
+					"-all_load",
+					"-ObjC",
+				);
+				PREBINDING = NO;
+				SDKROOT = iphoneos3.2;
+			};
+			name = Debug;
+		};
+		1DEB922408733DC00010E9CD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				GCC_C_LANGUAGE_STANDARD = c99;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				OTHER_LDFLAGS = "-ObjC";
+				PREBINDING = NO;
+				SDKROOT = iphoneos3.2;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		1DEB921E08733DC00010E9CD /* Build configuration list for PBXNativeTarget "CloudKit" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1DEB921F08733DC00010E9CD /* Debug */,
+				1DEB922008733DC00010E9CD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		1DEB922208733DC00010E9CD /* Build configuration list for PBXProject "CloudKit" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1DEB922308733DC00010E9CD /* Debug */,
+				1DEB922408733DC00010E9CD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 0867D690FE84028FC02AAC07 /* Project object */;
+}
