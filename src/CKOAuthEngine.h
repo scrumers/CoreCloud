@@ -8,13 +8,13 @@
 
 #import <Foundation/Foundation.h>
 
-#import "CKAuthenticationEngine.h"
+#import "CKEngine.h"
 
 @class OAToken;
 @class OAConsumer;
 @protocol OASignatureProviding;
 
-@interface CKOAuthEngine : NSObject<CKAuthenticationEngine> {
+@interface CKOAuthEngine : NSObject<CKEngine> {
 	OAToken * _token;
 	OAConsumer * _consumer;
 	id <OASignatureProviding, NSObject> _signatureProvider;

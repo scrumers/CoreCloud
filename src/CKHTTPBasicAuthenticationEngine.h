@@ -8,14 +8,14 @@
 
 #import <Foundation/Foundation.h>
 
-#import "CKAuthenticationEngine.h"
+#import "CKEngine.h"
 
-@interface CKHTTPBasicAuthenticationEngine : NSObject<CKAuthenticationEngine> {
+@interface CKHTTPBasicAuthenticationEngine : NSObject<CKEngine> {
 	NSString *_username, *_password, *_basic_authorization;
 }
 
-- (void)setupWithDictionary:(NSDictionary *)dictionary; 
-- (NSMutableURLRequest *)signRequest:(NSMutableURLRequest *)request;
+- (void)processRequest:(NSMutableURLRequest **)request withParams:(NSDictionary *)params;
+- (void)processResponse:(NSHTTPURLResponse **)response withParams:(NSDictionary *)params andData:(id *)data;
 
 @property(nonatomic, retain) NSString *username, *password, *basic_authorization;
 

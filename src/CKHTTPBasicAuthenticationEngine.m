@@ -28,21 +28,16 @@ basic_authorization= _basic_authorization;
 	return self;
 }
 
-- (void)setupWithDictionary:(NSDictionary *)dictionary {
-	self.username= [dictionary valueForKey:@"username"];
-	self.password= [dictionary valueForKey:@"password"];
-	NSLog(@"Credentials= %@:%@", self.username, self.password);
-
-	NSData *encodedCredentials;
-	encodedCredentials= [[NSString stringWithFormat:@"%@:%@", self.username, self.password] dataUsingEncoding:NSASCIIStringEncoding];
-	self.basic_authorization= [NSString stringWithFormat:@"Basic %@", [NSData base64forData:encodedCredentials]];
-	NSLog(@"Encoded credentials= %@", self.basic_authorization);
-
+- (void)processRequest:(NSMutableURLRequest **)request withParams:(NSDictionary *)params {
+	if (self.basic_authorization == nil) {
+		NSData *encodedCredentials;
+		encodedCredentials= [[NSString stringWithFormat:@"%@:%@", self.username, self.password] dataUsingEncoding:NSASCIIStringEncoding];
+		self.basic_authorization= [NSString stringWithFormat:@"Basic %@", [NSData base64forData:encodedCredentials]];		
+	}
+	[*request addValue:self.basic_authorization forHTTPHeaderField:@"Authorization"];
 }
 
-- (NSMutableURLRequest *)signRequest:(NSMutableURLRequest *)request {
-	[request addValue:self.basic_authorization forHTTPHeaderField:@"Authorization"];
-	return request;
+- (void)processResponse:(NSHTTPURLResponse **)response withParams:(NSDictionary *)params andData:(id *)data {
 }
 
 - (void) dealloc {

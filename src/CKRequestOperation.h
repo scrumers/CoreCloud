@@ -8,15 +8,25 @@
 
 #import <Foundation/Foundation.h>
 
+@class CKCloudKitManager;
 
 @interface CKRequestOperation : NSOperation {
 	NSMutableURLRequest * request;
 	id delegate;
+	CKCloudKitManager *configuration;
+	NSDictionary *params;
 	NSData * data;
 	NSError * error;
 }
 
-- (id)initWithRequest:(NSMutableURLRequest *)inRequest andDelegate:(id)inDelegate;
-+ (id)operationWithRequest:(NSMutableURLRequest *)inRequest andDelegate:(id)inDelegate;
+- (id)initWithRequest:(NSMutableURLRequest *)inRequest 
+							 params:(NSDictionary *)inParams 
+						 delegate:(id)inDelegate 
+		 andConfiguration:(CKCloudKitManager *)inConfiguration;
+
++ (id)operationWithRequest:(NSMutableURLRequest *)inRequest 
+										params:(NSDictionary *)inParams 
+									delegate:(id)inDelegate 
+					andCongiguration:(CKCloudKitManager *)inConfiguration;
 
 @end

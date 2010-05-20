@@ -8,13 +8,15 @@
 
 #import <Foundation/Foundation.h>
 
+@class CKRequestOperation;
 
 @interface CKRequestManager : NSObject {
 	NSOperationQueue * operationQueue;
 }
 
 + (id)sharedManager;
-- (void)sendRequest:(NSMutableURLRequest *)request withDelegate:(id)delegate;
-- (void)cancelAllRequests;
+
+- (void)processRequestOperation:(CKRequestOperation *)operation;
+- (void)cancelAllRequestOperations;
 
 @end

@@ -1,0 +1,76 @@
+/* 
+   HTTPStatus.strings
+   CloudKit
+
+   Created by Ludovic Galabru on 5/20/10.
+   Copyright 2010 scrumers. All rights reserved.
+ */
+
+// 1xx Informational
+"100"= "Continue";
+"101"= "Switching Protocols";
+"102"= "Processing (WebDAV)";
+
+// 2xx Success
+// This class of status codes indicates the action requested by the client was received, understood, accepted and processed successfully.
+"200"= "OK";
+"201"= "Created";
+"202"= "Accepted";
+"203"= "The server successfully processed the request, but is returning information that may be from another source.";
+"204"= "The server successfully processed the request, but is not returning any content.";
+"205"= "The server successfully processed the request, but is not returning any content.";
+"206"= "The server is delivering only part of the resource due to a range header sent by the client";
+"207"= "The message body that follows is an XML message and can contain a number of separate response codes";
+
+// 3xx Redirection
+// This class of status code indicates that further action needs to be taken by the user agent in order to fulfil the request. The action required may be carried out by the user agent without interaction with the user if and only if the method used in the second request is GET or HEAD. A user agent should not automatically redirect a request more than five times, since such redirections usually indicate an infinite loop.
+"300"= "Multiple Choices";
+"301"= "Moved Permanently";
+"302"= "Found";
+"304"= "The resource has not been modified since last requested.";
+"305"= "Use Proxy";
+"307"= "Temporary Redirect";
+
+// 4xx Client Error
+// The 4xx class of status code is intended for cases in which the client seems to have erred. Except when responding to a HEAD request, the server should include an entity containing an explanation of the error situation, and whether it is a temporary or permanent condition. These status codes are applicable to any request method. User agents should display any included entity to the user. These are typically the most common error codes encountered while online.
+"400"= "The request contains bad syntax or cannot be fulfilled.";
+"401"= "Unauthorized";
+"402"= "Payment Required";
+"403"= "The request was a legal request, but the server is refusing to respond to it.";
+"404"= "The requested resource could not be found but may be available again in the future.";
+"405"= "A request was made of a resource using a request method not supported by that resource.";
+"406"= "The requested resource is only capable of generating content not acceptable according to the Accept headers sent in the request.";
+"407"= "Proxy Authentication Required";
+"408"= "The server timed out waiting for the request.";
+"409"= "The request could not be processed because of conflict in the request";
+"410"= "Indicates that the resource requested is no longer available and will not be available again";
+"411"= "The request did not specify the length of its content, which is required by the requested resource.";
+"412"= "The server does not meet one of the preconditions that the requester put on the request.";
+"413"= "The request is larger than the server is willing or able to process.";
+"414"= "The URI provided was too long for the server to process.";
+"415"= "The request entity has a media type which the server or resource does not support.";
+"416"= "The client has asked for a portion of the file, but the server cannot supply that portion.";
+"417"= "The server cannot meet the requirements of the Expect request-header field.";
+"418"= "The HTCPCP server is a teapot.";
+"421"= "There are too many connections from your internet address";
+"422"= "The request was well-formed but was unable to be followed due to semantic errors.";
+"423"= "The resource that is being accessed is locked";
+"424"= "The request failed due to failure of a previous request";
+"425"= "Unordered Collection";
+"426"= "The client should switch to a different protocol such as TLS/1.0.";
+"449"= "The request should be retried after doing the appropriate action.";
+
+// 5xx Server Error
+// The server failed to fulfill an apparently valid request.[2]
+"500"= "Internal Server Error";
+"501"= "The server either does not recognise the request method, or it lacks the ability to fulfill the request.";
+"502"= "The server was acting as a gateway or proxy and received an invalid response from the upstream server.";
+"503"= "The server is currently unavailable (because it is overloaded or down for maintenance).";
+"504"= "The server was acting as a gateway or proxy and did not receive a timely request from the upstream server.";
+"505"= "The server does not support the HTTP protocol version used in the request.";
+"506"= "Transparent content negotiation for the request, results in a circular reference.";
+"507"= "Insufficient Storage";
+"509"= "Bandwidth Limit Exceeded";
+"510"= "Not Extended";
+"530"= "User access denied";
+

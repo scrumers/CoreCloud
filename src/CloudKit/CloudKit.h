@@ -11,12 +11,9 @@
 #import "CKRequestManager.h"
 #import "CKRequestOperation.h"
 
-#import "CKAuthenticationEngine.h"
 #import "CKHTTPBasicAuthenticationEngine.h"
 #import "CKOAuthEngine.h"
-
-#import "CKSerializationEngine.h"
 #import "CKJSONEngine.h"
+#import "CKRoutesEngine.h"
 
-#import "CKInstanciationEngine.h"
-#import "CKRESTEngine.h"
+#import "CKEngine.h"

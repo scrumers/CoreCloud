@@ -8,32 +8,46 @@
 //
 
 #import "CKJSONEngine.h"
-#import "NSObject+YAJL.h"
+#import "TouchJSON/TouchJSON.h"
 
 @implementation CKJSONEngine
 
+
+- (void)processRequest:(NSMutableURLRequest **)request withParams:(NSDictionary *)params {
+	NSString *path;
+	path= [[[*request URL] absoluteString] stringByAppendingString:@".json"];
+	[*request setURL:[NSURL URLWithString:path]];
+	[*request addValue:@"application/json" forHTTPHeaderField:@"Content-Type"];
+}
+
+- (void)processResponse:(NSHTTPURLResponse **)response withParams:(NSDictionary *)params andData:(id *)data {
+	NSError *error= nil;
+	*data= [self deserialize:*data error:&error];
+	NSLog(@"Response:%@", *data);
+}
+
 - (NSString *)serializeObject:(id)inObject {
-	return [inObject yajl_JSONString];
+	return [[CJSONSerializer serializer] serializeObject:inObject];
 }
 
 - (NSString *)serializeArray:(NSArray *)inArray {
-	return [inArray yajl_JSONString];
+	return [[CJSONSerializer serializer] serializeArray:inArray];
 }
 
 - (NSString *)serializeDictionary:(NSDictionary *)inDictionary {
-	return [inDictionary yajl_JSONString];
+	return [[CJSONSerializer serializer] serializeDictionary:inDictionary];
 }
 
 - (id)deserialize:(NSData *)inData error:(NSError **)outError {
-	return [inData yajl_JSON];
+	return [[CJSONDeserializer deserializer] deserialize:inData error:outError];
 }
 
 - (id)deserializeAsDictionary:(NSData *)inData error:(NSError **)outError {
-	return [inData yajl_JSON];
+	return [[CJSONDeserializer deserializer] deserializeAsDictionary:inData error:outError];
 }
 
 - (id)deserializeAsArray:(NSData *)inData error:(NSError **)outError {
-	return [inData yajl_JSON];
+	return [[CJSONDeserializer deserializer] deserializeAsArray:inData error:outError];
 }
 
 @end

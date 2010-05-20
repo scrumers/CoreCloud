@@ -28,12 +28,11 @@
 	return defaultManager;
 }
 
-- (void)sendRequest:(NSMutableURLRequest *)request withDelegate:(id)delegate {
-	CKRequestOperation *operation = [CKRequestOperation operationWithRequest:request andDelegate:delegate];
+- (void)processRequestOperation:(CKRequestOperation *)operation {
 	[operationQueue addOperation:operation];
 }
 
-- (void)cancelAllRequests {
+- (void)cancelAllRequestOperations {
 	[operationQueue cancelAllOperations];
 }
 

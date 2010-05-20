@@ -7,11 +7,14 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "CKSerializationEngine.h"
+#import "CKEngine.h"
 
-@interface CKJSONEngine : NSObject <CKSerializationEngine> {
+@interface CKJSONEngine : NSObject <CKEngine> {
 
 }
+
+- (void)processRequest:(NSMutableURLRequest **)request withParams:(NSDictionary *)params;
+- (void)processResponse:(NSHTTPURLResponse **)response withParams:(NSDictionary *)params andData:(id *)data;
 
 - (NSString *)serializeObject:(id)inObject;
 - (NSString *)serializeArray:(NSArray *)inArray;

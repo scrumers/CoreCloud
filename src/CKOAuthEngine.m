@@ -25,10 +25,6 @@ signatureProvider = _signatureProvider;
 	
 }
 
-- (NSMutableURLRequest *)signRequest:(NSMutableURLRequest *)request {
-	
-}
-
 - (void) dealloc {
 	[_token release];
 	[_consumer release];

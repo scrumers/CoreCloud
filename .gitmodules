@@ -4,3 +4,6 @@
 [submodule "lib/fbconnect-objc"]
 	path = lib/fbconnect-objc
 	url = git@github.com:scrumers/fbconnect-objc.git
+[submodule "lib/YAJL-objc"]
+	path = lib/YAJL-objc
+	url = git@github.com:scrumers/YAJL-objc.git

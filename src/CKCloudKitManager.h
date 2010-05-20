@@ -8,24 +8,21 @@
 
 #import <Foundation/Foundation.h>
 
-#import "CKAuthenticationEngine.h"
-#import "CKSerializationEngine.h"
-#import "CKInstanciationEngine.h"
+@protocol CKEngine;
 
 @interface CKCloudKitManager : NSObject {
-	NSString *_domain, *_subdomain, *_protocol, *_api_path;
-	NSObject<CKAuthenticationEngine> *_authenticationEngine;
-	NSObject<CKSerializationEngine> *_serializationEngine;
-	NSObject<CKInstanciationEngine> *_instanciationEngine;
-
+	NSMutableArray *ordered_engines;
+	NSMutableDictionary *engines;
 }
 
 + (CKCloudKitManager *)defaultConfiguration;
-- (NSMutableURLRequest *)signRequest:(NSMutableURLRequest *)request;
+- (void)addEngine:(NSObject<CKEngine> *)engine withKey:(NSString *)key;
+- (NSObject<CKEngine> *)engineForKey:(NSString *)key;
 
-@property(nonatomic, copy) NSString *domain, *subdomain, *protocol, *api_path;
-@property(nonatomic, retain) NSObject<CKAuthenticationEngine> *authenticationEngine;
-@property(nonatomic, retain) NSObject<CKSerializationEngine> *serializationEngine;
-@property(nonatomic, retain) NSObject<CKInstanciationEngine> *instanciationEngine;
+- (void)sendRequest:(NSMutableURLRequest *)request withParams:(NSDictionary *)params andDelegate:(id)delegate;
+- (void)sendRequest:(NSMutableURLRequest *)request withParams:(NSDictionary *)params;
+- (void)sendRequest:(NSMutableURLRequest *)request;
+
+@property(readonly) NSMutableArray *ordered_engines;
 
 @end

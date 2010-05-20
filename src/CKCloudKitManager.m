@@ -7,31 +7,18 @@
 //
 
 #import "CKCloudKitManager.h"
+#import "CKRequestManager.h"
+#import "CKEngine.h"
 
 @implementation CKCloudKitManager
 
-@synthesize 
-domain= _domain,
-protocol= _protocol,
-subdomain= _subdomain,
-api_path= _api_path;
-
-@synthesize
-authenticationEngine= _authenticationEngine;
-
-@synthesize
-serializationEngine= _serializationEngine;
-
-@synthesize
-instanciationEngine= _instanciationEngine;
+@synthesize ordered_engines;
 
 - (id)init {
 	self = [super init];
 	if (self != nil) {
-		self.protocol= @"http://";
-		self.subdomain= @"";
-		self.domain= @"";
-		self.api_path= @"";
+		ordered_engines= [[NSMutableArray alloc] init];
+		engines= [[NSMutableDictionary alloc] init]; 
 	}
 	return self;
 }
@@ -44,18 +31,40 @@ instanciationEngine= _instanciationEngine;
 	return defaultConfiguration;
 }
 
-- (NSMutableURLRequest *)signRequest:(NSMutableURLRequest *)request {
-	return [_authenticationEngine signRequest:request];
+- (void)addEngine:(NSObject<CKEngine> *)engine withKey:(NSString *)key {
+	[ordered_engines addObject:key];
+	[engines setObject:engine forKey:key];
 }
 
+- (NSObject<CKEngine> *)engineForKey:(NSString *)key {
+	return [engines objectForKey:key];
+}
+
+- (void)sendRequest:(NSMutableURLRequest *)request withParams:(NSDictionary *)params andDelegate:(id)delegate {
+	CKRequestOperation *requestOperation;
+	requestOperation= [CKRequestOperation operationWithRequest:request
+																											params:params
+																										delegate:delegate 
+																						andCongiguration:self];
+	[[CKRequestManager sharedManager] processRequestOperation:requestOperation];
+}
+
+- (void)sendRequest:(NSMutableURLRequest *)request withParams:(NSDictionary *)params {
+	[self sendRequest:request withParams:params andDelegate:nil];
+}
+
+- (void)sendRequest:(NSMutableURLRequest *)request withDelegate:(id)delegate {
+	[self sendRequest:request withParams:nil andDelegate:delegate];
+}
+
+- (void)sendRequest:(NSMutableURLRequest *)request {
+	[self sendRequest:request withParams:nil andDelegate:nil];
+}
+
+
 - (void)dealloc {
-	[_domain release];
-	[_api_path release];
-	[_subdomain release];
-	[_protocol release];
-	[_authenticationEngine release];
-	[_serializationEngine release];
-	[_instanciationEngine release];
+	[engines release];
+	[ordered_engines release];
 	[super dealloc];
 }
 
