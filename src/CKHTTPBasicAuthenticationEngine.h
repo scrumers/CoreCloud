@@ -15,7 +15,7 @@
 }
 
 - (void)processRequest:(NSMutableURLRequest **)request withParams:(NSDictionary *)params;
-- (void)processResponse:(NSHTTPURLResponse **)response withParams:(NSDictionary *)params andData:(id *)data;
+- (void)processResponse:(NSHTTPURLResponse **)response withParams:(NSDictionary *)params data:(id *)data andError:(NSError **)error;
 
 @property(nonatomic, retain) NSString *username, *password, *basic_authorization;
 

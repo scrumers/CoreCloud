@@ -10,6 +10,18 @@
 #import "CKJSONEngine.h"
 #import "TouchJSON/TouchJSON.h"
 
+@interface CKJSONEngine (Private)
+
+- (NSString *)serializeObject:(id)inObject;
+- (NSString *)serializeArray:(NSArray *)inArray;
+- (NSString *)serializeDictionary:(NSDictionary *)inDictionary;
+
+- (id)deserialize:(NSData *)inData error:(NSError **)outError;
+- (id)deserializeAsDictionary:(NSData *)inData error:(NSError **)outError;
+- (id)deserializeAsArray:(NSData *)inData error:(NSError **)outError;
+
+@end
+
 @implementation CKJSONEngine
 
 
@@ -20,10 +32,8 @@
 	[*request addValue:@"application/json" forHTTPHeaderField:@"Content-Type"];
 }
 
-- (void)processResponse:(NSHTTPURLResponse **)response withParams:(NSDictionary *)params andData:(id *)data {
-	NSError *error= nil;
-	*data= [self deserialize:*data error:&error];
-	NSLog(@"Response:%@", *data);
+- (void)processResponse:(NSHTTPURLResponse **)response withParams:(NSDictionary *)params data:(id *)data andError:(NSError **)error {
+	*data= [self deserialize:*data error:error];
 }
 
 - (NSString *)serializeObject:(id)inObject {

@@ -10,13 +10,14 @@
 
 @class CKCloudKitManager;
 
+@protocol CKRequestDelegate;
+
 @interface CKRequestOperation : NSOperation {
 	NSMutableURLRequest * request;
-	id delegate;
+	id<CKRequestDelegate> delegate;
 	CKCloudKitManager *configuration;
 	NSDictionary *params;
 	NSData * data;
-	NSError * error;
 }
 
 - (id)initWithRequest:(NSMutableURLRequest *)inRequest 

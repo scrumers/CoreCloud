@@ -41,7 +41,7 @@
 }
 
 - (void)main {
-	error = nil;
+	NSError *error = nil;
 	NSArray *ordered_engines= [configuration ordered_engines];
 	for (id engine_name in ordered_engines) {
 		id<CKEngine> engine= [configuration engineForKey:engine_name];
@@ -51,16 +51,35 @@
 	id rawData = [NSURLConnection sendSynchronousRequest:request 
 																			returningResponse:&response 
 																									error:&error];
-	if (response.statusCode > 400) {
-		//errors
-	} else {
+	
+	if (response.statusCode < 400 && error == nil) {
 		for (int index= [ordered_engines count]-1; index >= 0; index--) {
 			id<CKEngine> engine= [configuration engineForKey:[ordered_engines objectAtIndex:index]];
 			[engine processResponse:&response 
 									 withParams:params 
-											andData:&rawData];
+												 data:&rawData
+										 andError:&error];
 		}
+	} else if (response.statusCode > 400) {
+		//errors handling
 	}
+	if (error == nil) {
+		[self performSelectorOnMainThread:@selector(requestDidSucceedWithData:) 
+													 withObject:rawData
+												waitUntilDone:YES];
+	} else {
+		[self performSelectorOnMainThread:@selector(requestDidFailWithError:) 
+													 withObject:error
+												waitUntilDone:YES];
+	}
+}
+
+- (void)requestDidFailWithError:(NSError *)error {
+	[delegate request:request didFailWithError:error];
+}
+
+- (void)requestDidSucceedWithData:(id)response {
+	[delegate request:request didSucceedWithData:response];
 }
 
 - (void)dealloc {

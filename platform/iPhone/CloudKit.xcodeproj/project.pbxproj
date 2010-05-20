@@ -35,6 +35,9 @@
 		431C7F5F11A41D93004F2B13 /* NSDictionary+CloudKitAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 431C7F5D11A41D93004F2B13 /* NSDictionary+CloudKitAdditions.m */; };
 		435A08CE1191C14A00030F4C /* CKEngine.h in Headers */ = {isa = PBXBuildFile; fileRef = 435A08CD1191C14A00030F4C /* CKEngine.h */; };
 		4378EF7A1181D6AA004697B8 /* CloudKit_Prefix.pch in Headers */ = {isa = PBXBuildFile; fileRef = 4378EF791181D6AA004697B8 /* CloudKit_Prefix.pch */; };
+		438E39B911A5834F0028F47F /* CKDictionarizerEngine.h in Headers */ = {isa = PBXBuildFile; fileRef = 438E39B711A5834F0028F47F /* CKDictionarizerEngine.h */; };
+		438E39BA11A5834F0028F47F /* CKDictionarizerEngine.m in Sources */ = {isa = PBXBuildFile; fileRef = 438E39B811A5834F0028F47F /* CKDictionarizerEngine.m */; };
+		438E3A6B11A595740028F47F /* CKRequestDelegate.h in Headers */ = {isa = PBXBuildFile; fileRef = 438E3A6A11A595740028F47F /* CKRequestDelegate.h */; };
 		AACBBE4A0F95108600F1A2B1 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AACBBE490F95108600F1A2B1 /* Foundation.framework */; };
 /* End PBXBuildFile section */
 
@@ -84,9 +87,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		4305391A11A535C8003C39C8 /* NSMutableArray+CloudKitAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSMutableArray+CloudKitAdditions.h"; sourceTree = "<group>"; };
-		4305391B11A535C8003C39C8 /* NSMutableArray+CloudKitAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSMutableArray+CloudKitAdditions.m"; sourceTree = "<group>"; };
-		43053A1111A55398003C39C8 /* HTTPStatus.strings */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; path = HTTPStatus.strings; sourceTree = "<group>"; };
+		4305391A11A535C8003C39C8 /* NSMutableArray+CloudKitAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSMutableArray+CloudKitAdditions.h"; path = "../../src/NSMutableArray+CloudKitAdditions.h"; sourceTree = "<group>"; };
+		4305391B11A535C8003C39C8 /* NSMutableArray+CloudKitAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSMutableArray+CloudKitAdditions.m"; path = "../../src/NSMutableArray+CloudKitAdditions.m"; sourceTree = "<group>"; };
+		43053A1111A55398003C39C8 /* HTTPStatus.strings */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; name = HTTPStatus.strings; path = ../../src/HTTPStatus.strings; sourceTree = "<group>"; };
 		4317EFEC1181DB510045FF78 /* CloudKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CloudKit.h; path = ../../src/CloudKit/CloudKit.h; sourceTree = SOURCE_ROOT; };
 		4317EFEF1181DB850045FF78 /* CKCloudKitManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CKCloudKitManager.h; path = ../../src/CKCloudKitManager.h; sourceTree = SOURCE_ROOT; };
 		4317EFF01181DB850045FF78 /* CKHTTPBasicAuthenticationEngine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CKHTTPBasicAuthenticationEngine.h; path = ../../src/CKHTTPBasicAuthenticationEngine.h; sourceTree = SOURCE_ROOT; };
@@ -107,10 +110,13 @@
 		4317F0011181DB850045FF78 /* NSData+CloudKitAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSData+CloudKitAdditions.m"; path = "../../src/NSData+CloudKitAdditions.m"; sourceTree = SOURCE_ROOT; };
 		4317F0021181DB850045FF78 /* NSString+InflectionSupport.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSString+InflectionSupport.m"; path = "../../src/NSString+InflectionSupport.m"; sourceTree = SOURCE_ROOT; };
 		431C7D6E11A402FA004F2B13 /* TouchJSON.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = TouchJSON.xcodeproj; path = "../../lib/touchjson-objc/src/TouchJSON.xcodeproj"; sourceTree = SOURCE_ROOT; };
-		431C7F5C11A41D93004F2B13 /* NSDictionary+CloudKitAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDictionary+CloudKitAdditions.h"; sourceTree = "<group>"; };
-		431C7F5D11A41D93004F2B13 /* NSDictionary+CloudKitAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDictionary+CloudKitAdditions.m"; sourceTree = "<group>"; };
+		431C7F5C11A41D93004F2B13 /* NSDictionary+CloudKitAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSDictionary+CloudKitAdditions.h"; path = "../../src/NSDictionary+CloudKitAdditions.h"; sourceTree = "<group>"; };
+		431C7F5D11A41D93004F2B13 /* NSDictionary+CloudKitAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSDictionary+CloudKitAdditions.m"; path = "../../src/NSDictionary+CloudKitAdditions.m"; sourceTree = "<group>"; };
 		435A08CD1191C14A00030F4C /* CKEngine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CKEngine.h; path = ../../src/CKEngine.h; sourceTree = "<group>"; };
 		4378EF791181D6AA004697B8 /* CloudKit_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CloudKit_Prefix.pch; sourceTree = "<group>"; };
+		438E39B711A5834F0028F47F /* CKDictionarizerEngine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CKDictionarizerEngine.h; path = ../../src/CKDictionarizerEngine.h; sourceTree = "<group>"; };
+		438E39B811A5834F0028F47F /* CKDictionarizerEngine.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CKDictionarizerEngine.m; path = ../../src/CKDictionarizerEngine.m; sourceTree = "<group>"; };
+		438E3A6A11A595740028F47F /* CKRequestDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CKRequestDelegate.h; path = ../../src/CKRequestDelegate.h; sourceTree = "<group>"; };
 		43A20D3C116DC1D700BA930A /* OAuthConsumer.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = OAuthConsumer.xcodeproj; path = "../../lib/oauth-objc/platform/iPhone/OAuthConsumer.xcodeproj"; sourceTree = SOURCE_ROOT; };
 		43A20FE9116DDC3800BA930A /* FBConnect.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = FBConnect.xcodeproj; path = "../../lib/fbconnect-objc/platform/iPhone/FBConnect.xcodeproj"; sourceTree = SOURCE_ROOT; };
 		AACBBE490F95108600F1A2B1 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -168,6 +174,7 @@
 				43A20CF0116DC0DA00BA930A /* Utils */,
 				43A20CE0116DC0DA00BA930A /* Engines */,
 				435A08CC1191C13000030F4C /* Route engines */,
+				438E3A6A11A595740028F47F /* CKRequestDelegate.h */,
 			);
 			name = Classes;
 			sourceTree = "<group>";
@@ -225,9 +232,19 @@
 			name = "Route engines";
 			sourceTree = "<group>";
 		};
+		438E39B611A5831B0028F47F /* Dictionarizer */ = {
+			isa = PBXGroup;
+			children = (
+				438E39B711A5834F0028F47F /* CKDictionarizerEngine.h */,
+				438E39B811A5834F0028F47F /* CKDictionarizerEngine.m */,
+			);
+			name = Dictionarizer;
+			sourceTree = "<group>";
+		};
 		43A20CE0116DC0DA00BA930A /* Engines */ = {
 			isa = PBXGroup;
 			children = (
+				438E39B611A5831B0028F47F /* Dictionarizer */,
 				43A20FD4116DD8F900BA930A /* Routes */,
 				43A20DA1116DC5A400BA930A /* JSON */,
 				43A20DA2116DC5B000BA930A /* XML */,
@@ -359,6 +376,8 @@
 				435A08CE1191C14A00030F4C /* CKEngine.h in Headers */,
 				431C7F5E11A41D93004F2B13 /* NSDictionary+CloudKitAdditions.h in Headers */,
 				4305391C11A535C8003C39C8 /* NSMutableArray+CloudKitAdditions.h in Headers */,
+				438E39B911A5834F0028F47F /* CKDictionarizerEngine.h in Headers */,
+				438E3A6B11A595740028F47F /* CKRequestDelegate.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -460,6 +479,7 @@
 				4317F0171181DB850045FF78 /* NSString+InflectionSupport.m in Sources */,
 				431C7F5F11A41D93004F2B13 /* NSDictionary+CloudKitAdditions.m in Sources */,
 				4305391D11A535C8003C39C8 /* NSMutableArray+CloudKitAdditions.m in Sources */,
+				438E39BA11A5834F0028F47F /* CKDictionarizerEngine.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -195,80 +195,7 @@
 	<key>Name</key>
 	<string>All-In-One</string>
 	<key>Notifications</key>
-	<array>
-		<dict>
-			<key>XCObserverAutoDisconnectKey</key>
-			<true/>
-			<key>XCObserverDefintionKey</key>
-			<dict>
-				<key>PBXStatusErrorsKey</key>
-				<integer>0</integer>
-			</dict>
-			<key>XCObserverFactoryKey</key>
-			<string>XCPerspectivesSpecificationIdentifier</string>
-			<key>XCObserverGUIDKey</key>
-			<string>XCObserverProjectIdentifier</string>
-			<key>XCObserverNotificationKey</key>
-			<string>PBXStatusBuildStateMessageNotification</string>
-			<key>XCObserverTargetKey</key>
-			<string>XCMainBuildResultsModuleGUID</string>
-			<key>XCObserverTriggerKey</key>
-			<string>awakenModuleWithObserver:</string>
-			<key>XCObserverValidationKey</key>
-			<dict>
-				<key>PBXStatusErrorsKey</key>
-				<integer>2</integer>
-			</dict>
-		</dict>
-		<dict>
-			<key>XCObserverAutoDisconnectKey</key>
-			<true/>
-			<key>XCObserverDefintionKey</key>
-			<dict>
-				<key>PBXStatusWarningsKey</key>
-				<integer>0</integer>
-			</dict>
-			<key>XCObserverFactoryKey</key>
-			<string>XCPerspectivesSpecificationIdentifier</string>
-			<key>XCObserverGUIDKey</key>
-			<string>XCObserverProjectIdentifier</string>
-			<key>XCObserverNotificationKey</key>
-			<string>PBXStatusBuildStateMessageNotification</string>
-			<key>XCObserverTargetKey</key>
-			<string>XCMainBuildResultsModuleGUID</string>
-			<key>XCObserverTriggerKey</key>
-			<string>awakenModuleWithObserver:</string>
-			<key>XCObserverValidationKey</key>
-			<dict>
-				<key>PBXStatusWarningsKey</key>
-				<integer>2</integer>
-			</dict>
-		</dict>
-		<dict>
-			<key>XCObserverAutoDisconnectKey</key>
-			<true/>
-			<key>XCObserverDefintionKey</key>
-			<dict>
-				<key>PBXStatusAnalyzerResultsKey</key>
-				<integer>0</integer>
-			</dict>
-			<key>XCObserverFactoryKey</key>
-			<string>XCPerspectivesSpecificationIdentifier</string>
-			<key>XCObserverGUIDKey</key>
-			<string>XCObserverProjectIdentifier</string>
-			<key>XCObserverNotificationKey</key>
-			<string>PBXStatusBuildStateMessageNotification</string>
-			<key>XCObserverTargetKey</key>
-			<string>XCMainBuildResultsModuleGUID</string>
-			<key>XCObserverTriggerKey</key>
-			<string>awakenModuleWithObserver:</string>
-			<key>XCObserverValidationKey</key>
-			<dict>
-				<key>PBXStatusAnalyzerResultsKey</key>
-				<integer>2</integer>
-			</dict>
-		</dict>
-	</array>
+	<array/>
 	<key>OpenEditors</key>
 	<array/>
 	<key>PerspectiveWidths</key>
@@ -358,7 +285,7 @@
 								</array>
 							</array>
 							<key>PBXSmartGroupTreeModuleOutlineStateVisibleRectKey</key>
-							<string>{{0, 0}, {263, 728}}</string>
+							<string>{{0, 0}, {263, 691}}</string>
 						</dict>
 						<key>PBXTopSmartGroupGIDs</key>
 						<array/>
@@ -368,7 +295,7 @@
 					<key>GeometryConfiguration</key>
 					<dict>
 						<key>Frame</key>
-						<string>{{0, 0}, {280, 746}}</string>
+						<string>{{0, 0}, {280, 709}}</string>
 						<key>GroupTreeTableConfiguration</key>
 						<array>
 							<string>SCMStatusColumn</string>
@@ -377,7 +304,7 @@
 							<real>241</real>
 						</array>
 						<key>RubberWindowFrame</key>
-						<string>135 105 1440 787 0 0 1680 1028 </string>
+						<string>0 128 1440 750 0 0 1440 878 </string>
 					</dict>
 					<key>Module</key>
 					<string>PBXSmartGroupTreeModule</string>
@@ -395,7 +322,7 @@
 								<key>PBXProjectModuleGUID</key>
 								<string>433104F70F1280740091B39C</string>
 								<key>PBXProjectModuleLabel</key>
-								<string>CJSONDeserializer.h</string>
+								<string>CSerializedJSONData.h</string>
 								<key>PBXSplitModuleInNavigatorKey</key>
 								<dict>
 									<key>Split0</key>
@@ -403,21 +330,19 @@
 										<key>PBXProjectModuleGUID</key>
 										<string>433104F80F1280740091B39C</string>
 										<key>PBXProjectModuleLabel</key>
-										<string>CJSONDeserializer.h</string>
+										<string>CSerializedJSONData.h</string>
 										<key>_historyCapacity</key>
 										<integer>0</integer>
 										<key>bookmark</key>
-										<string>431C7DC911A405A8004F2B13</string>
+										<string>438E39CE11A5864B0028F47F</string>
 										<key>history</key>
 										<array>
 											<string>431C7D8711A4042B004F2B13</string>
 											<string>431C7D8811A4042B004F2B13</string>
 											<string>431C7D8911A4042B004F2B13</string>
-											<string>431C7D8A11A4042B004F2B13</string>
 											<string>431C7D8C11A4042B004F2B13</string>
 											<string>431C7D8D11A4042B004F2B13</string>
 											<string>431C7D8E11A4042B004F2B13</string>
-											<string>431C7D8F11A4042B004F2B13</string>
 											<string>431C7D9011A4042B004F2B13</string>
 											<string>431C7D9111A4042B004F2B13</string>
 											<string>431C7D9211A4042B004F2B13</string>
@@ -429,7 +354,9 @@
 											<string>431C7D9811A4042B004F2B13</string>
 											<string>431C7D9911A4042B004F2B13</string>
 											<string>431C7DC711A405A8004F2B13</string>
-											<string>431C7DC811A405A8004F2B13</string>
+											<string>438E39CB11A5864B0028F47F</string>
+											<string>438E39CC11A5864B0028F47F</string>
+											<string>438E39CD11A5864B0028F47F</string>
 										</array>
 									</dict>
 									<key>SplitCount</key>
@@ -443,18 +370,18 @@
 							<key>GeometryConfiguration</key>
 							<dict>
 								<key>Frame</key>
-								<string>{{0, 0}, {1155, 741}}</string>
+								<string>{{0, 0}, {1155, 493}}</string>
 								<key>RubberWindowFrame</key>
-								<string>135 105 1440 787 0 0 1680 1028 </string>
+								<string>0 128 1440 750 0 0 1440 878 </string>
 							</dict>
 							<key>Module</key>
 							<string>PBXNavigatorGroup</string>
 							<key>Proportion</key>
-							<string>741pt</string>
+							<string>493pt</string>
 						</dict>
 						<dict>
 							<key>Proportion</key>
-							<string>0pt</string>
+							<string>211pt</string>
 							<key>Tabs</key>
 							<array>
 								<dict>
@@ -469,8 +396,6 @@
 									<dict>
 										<key>Frame</key>
 										<string>{{10, 27}, {1155, -27}}</string>
-										<key>RubberWindowFrame</key>
-										<string>135 105 1440 787 0 0 1680 1028 </string>
 									</dict>
 									<key>Module</key>
 									<string>XCDetailModule</string>
@@ -486,7 +411,9 @@
 									<key>GeometryConfiguration</key>
 									<dict>
 										<key>Frame</key>
-										<string>{{10, 27}, {1155, 205}}</string>
+										<string>{{10, 27}, {1155, 184}}</string>
+										<key>RubberWindowFrame</key>
+										<string>0 128 1440 750 0 0 1440 878 </string>
 									</dict>
 									<key>Module</key>
 									<string>PBXProjectFindModule</string>
@@ -517,9 +444,9 @@
 										<key>PBXProjectModuleLabel</key>
 										<string>Build Results</string>
 										<key>XCBuildResultsTrigger_Collapse</key>
-										<integer>1024</integer>
+										<integer>1021</integer>
 										<key>XCBuildResultsTrigger_Open</key>
-										<integer>1013</integer>
+										<integer>1011</integer>
 									</dict>
 									<key>GeometryConfiguration</key>
 									<dict>
@@ -552,11 +479,11 @@
 			</array>
 			<key>TableOfContents</key>
 			<array>
-				<string>431C7DCA11A405A8004F2B13</string>
+				<string>438E39CF11A5864B0028F47F</string>
 				<string>1CA23ED40692098700951B8B</string>
-				<string>431C7DCB11A405A8004F2B13</string>
+				<string>438E39D011A5864B0028F47F</string>
 				<string>433104F70F1280740091B39C</string>
-				<string>431C7DCC11A405A8004F2B13</string>
+				<string>438E39D111A5864B0028F47F</string>
 				<string>1CA23EDF0692099D00951B8B</string>
 				<string>1CA23EE00692099D00951B8B</string>
 				<string>1CA23EE10692099D00951B8B</string>
@@ -726,9 +653,9 @@
 	<key>StatusbarIsVisible</key>
 	<true/>
 	<key>TimeStamp</key>
-	<real>295962024.31545103</real>
+	<real>0.0</real>
 	<key>ToolbarDisplayMode</key>
-	<integer>2</integer>
+	<integer>1</integer>
 	<key>ToolbarIsVisible</key>
 	<true/>
 	<key>ToolbarSizeMode</key>
@@ -741,10 +668,10 @@
 	<integer>5</integer>
 	<key>WindowOrderList</key>
 	<array>
-		<string>/Volumes/Sprints mobile/Scrumers/Libraries/CloudKit/lib/touchjson-objc/src/TouchJSON.xcodeproj</string>
+		<string>/Volumes/Scrumers mobile/Scrumers/Libraries/CloudKit/lib/touchjson-objc/src/TouchJSON.xcodeproj</string>
 	</array>
 	<key>WindowString</key>
-	<string>135 105 1440 787 0 0 1680 1028 </string>
+	<string>0 128 1440 750 0 0 1440 878 </string>
 	<key>WindowToolsV3</key>
 	<array>
 		<dict>

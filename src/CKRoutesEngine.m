@@ -10,6 +10,17 @@
 #import "NSDictionary+CloudKitAdditions.h"
 #import "NSMutableArray+CloudKitAdditions.h"
 
+@interface CKRoutesEngine (Private)
+
+- (NSURL *)URLForKey:(NSString *)key;
+- (NSURL *)URLForKey:(NSString *)key withDictionary:(NSDictionary *)newConstants;
+- (NSString *)HTTPMethodForKey:(NSString *)key;
+
+- (NSMutableURLRequest *)requestForKey:(NSString *)key;
+- (NSMutableURLRequest *)requestForKey:(NSString *)key withDictionary:(NSDictionary *)newConstants;
+
+@end
+
 @implementation CKRoutesEngine
 
 - (id)init {
@@ -41,7 +52,7 @@
 	}
 }
 
-- (void)processResponse:(NSHTTPURLResponse **)response withParams:(NSDictionary *)params andData:(id *)data {
+- (void)processResponse:(NSHTTPURLResponse **)response withParams:(NSDictionary *)params data:(id *)data andError:(NSError **)error {
 }
 
 - (NSURL *)URLForKey:(NSString *)key {

@@ -16,13 +16,6 @@
 - (id)initWithRoutesURL:(NSURL *)URL;
 
 - (void)processRequest:(NSMutableURLRequest **)request withParams:(NSDictionary *)params;
-- (void)processResponse:(NSHTTPURLResponse **)response withParams:(NSDictionary *)params andData:(id *)data;
-
-- (NSURL *)URLForKey:(NSString *)key;
-- (NSURL *)URLForKey:(NSString *)key withDictionary:(NSDictionary *)newConstants;
-- (NSString *)HTTPMethodForKey:(NSString *)key;
-
-- (NSMutableURLRequest *)requestForKey:(NSString *)key;
-- (NSMutableURLRequest *)requestForKey:(NSString *)key withDictionary:(NSDictionary *)newConstants;
+- (void)processResponse:(NSHTTPURLResponse **)response withParams:(NSDictionary *)params data:(id *)data andError:(NSError **)error;
 
 @end

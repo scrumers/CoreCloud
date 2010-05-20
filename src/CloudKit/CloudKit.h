@@ -15,5 +15,7 @@
 #import "CKOAuthEngine.h"
 #import "CKJSONEngine.h"
 #import "CKRoutesEngine.h"
+#import "CKDictionarizerEngine.h"
 
 #import "CKEngine.h"
+#import "CKRequestDelegate.h"

@@ -37,7 +37,7 @@ basic_authorization= _basic_authorization;
 	[*request addValue:self.basic_authorization forHTTPHeaderField:@"Authorization"];
 }
 
-- (void)processResponse:(NSHTTPURLResponse **)response withParams:(NSDictionary *)params andData:(id *)data {
+- (void)processResponse:(NSHTTPURLResponse **)response withParams:(NSDictionary *)params data:(id *)data andError:(NSError **)error {
 }
 
 - (void) dealloc {
