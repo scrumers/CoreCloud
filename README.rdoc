@@ -65,11 +65,11 @@ Engines are used in the order you declared it for a request, and reversed order 
 
   @end
 
-Once you've configured CloudKit, you can use it:
+Once you've configured CloudKit, your interlocutor will be CKCloudKitManager:
 
   - (void)loadDashboard:(id)sender {
     NSMutableURLRequest *request;
-    request= [NSMutableURLRequest requestWithURL:[NSURL URLWithString:@"user#dashboard"]];
+    request= [NSMutableURLRequest requestWithURL:[NSURL URLWithString:@"user#index"]];
     [[CKCloudKitManager defaultConfiguration] sendRequest:request withParams:nil andDelegate:self];
   }
 
@@ -81,7 +81,7 @@ Once you've configured CloudKit, you can use it:
     // error handling
   }
 
-That's it, your getting some objects from the cloud.
+That's it, we've just obtained an array of objects from the cloud.
 
 More documentation coming soon.
   
