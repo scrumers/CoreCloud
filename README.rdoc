@@ -68,7 +68,7 @@ Once you've configured CloudKit, you can use it:
   }
 
   - (void)request:(NSMutableURLRequest *)request didFailWithError:(NSError *)error {
-  	// error handling
+    // error handling
   }
 
 That's it, your getting some objects from the cloud.
