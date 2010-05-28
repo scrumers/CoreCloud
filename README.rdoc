@@ -67,7 +67,7 @@ Engines are used in the order you declared it for a request, and reversed order 
 
 Once you've configured CloudKit, your interlocutor will be CKCloudKitManager:
 
-  - (void)loadDashboard:(id)sender {
+  - (void)loadUsers:(id)sender {
     NSMutableURLRequest *request;
     request= [NSMutableURLRequest requestWithURL:[NSURL URLWithString:@"user#index"]];
     [[CKCloudKitManager defaultConfiguration] sendRequest:request withParams:nil andDelegate:self];
