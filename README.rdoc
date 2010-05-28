@@ -24,32 +24,25 @@ CloudKit is based on an engine chain. The order you build your chain is importan
 
   - (void)setUpCloudKit {
   	CKRoutesEngine *routesEngine;
-  	NSURL *routesURL= [[NSBundle mainBundle] URLForResource:@"Routes" 
-  																						withExtension:@"plist"];
+  	NSURL *routesURL= [[NSBundle mainBundle] URLForResource:@"Routes" withExtension:@"plist"];
   	routesEngine= [[CKRoutesEngine alloc] initWithRoutesURL:routesURL];
-  	[[CKCloudKitManager defaultConfiguration] addEngine:routesEngine 
-  																							withKey:@"RouteEngine"];
+  	[[CKCloudKitManager defaultConfiguration] addEngine:routesEngine withKey:@"RouteEngine"];
   	[routesEngine release];
 	
   	CKDictionarizerEngine *dictionarizerEngine;
   	dictionarizerEngine= [[CKDictionarizerEngine alloc] initWithLocalPrefix:@"S"]; 
-  	[[CKCloudKitManager defaultConfiguration] addEngine:dictionarizerEngine 
-  																							withKey:@"DictionarizerEngine"];
+  	[[CKCloudKitManager defaultConfiguration] addEngine:dictionarizerEngine	withKey:@"DictionarizerEngine"];
   	[dictionarizerEngine release];
 	
   	CKJSONEngine *JSONEngine;
   	JSONEngine= [[CKJSONEngine alloc] init];
-  	[[CKCloudKitManager defaultConfiguration] addEngine:JSONEngine 
-  																							withKey:@"JSONEngine"];
+  	[[CKCloudKitManager defaultConfiguration] addEngine:JSONEngine withKey:@"JSONEngine"];
   	[JSONEngine release];
 	
   	CKHTTPBasicAuthenticationEngine *HTTPBasicEngine;
   	HTTPBasicEngine= [[CKHTTPBasicAuthenticationEngine alloc] init];
-  	[[CKCloudKitManager defaultConfiguration] addEngine:HTTPBasicEngine 
-  																							withKey:@"HTTPBasicEngine"];
+  	[[CKCloudKitManager defaultConfiguration] addEngine:HTTPBasicEngine withKey:@"HTTPBasicEngine"];
   	[HTTPBasicEngine release];
-	
-	
   }	
 
   - (void)applicationDidFinishLaunching:(UIApplication *)application {
