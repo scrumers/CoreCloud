@@ -55,6 +55,16 @@ CloudKit is based on an engine chain. The order you build your chain is importan
   	[self setUpCloudKit];
   }
 
+Engines are used in the order you declared it for a request, and reversed order for responses. An engine is a simple class implementing the following protocol: 
+
+  @protocol CKEngine
+
+  @required
+  - (void)processRequest:(NSMutableURLRequest **)request withParams:(NSDictionary *)params;
+  - (void)processResponse:(NSHTTPURLResponse **)response withParams:(NSDictionary *)params andData:(id *)data;
+
+  @end
+
 Once you've configured CloudKit, you can use it:
 
   - (void)loadDashboard:(id)sender {

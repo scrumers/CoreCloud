@@ -282,15 +282,14 @@
 							<key>PBXSmartGroupTreeModuleOutlineStateSelectionKey</key>
 							<array>
 								<array>
-									<integer>15</integer>
-									<integer>13</integer>
-									<integer>12</integer>
+									<integer>26</integer>
+									<integer>25</integer>
 									<integer>2</integer>
 									<integer>0</integer>
 								</array>
 							</array>
 							<key>PBXSmartGroupTreeModuleOutlineStateVisibleRectKey</key>
-							<string>{{0, 0}, {249, 691}}</string>
+							<string>{{0, 34}, {249, 691}}</string>
 						</dict>
 						<key>PBXTopSmartGroupGIDs</key>
 						<array/>
@@ -327,7 +326,7 @@
 								<key>PBXProjectModuleGUID</key>
 								<string>433104F70F1280740091B39C</string>
 								<key>PBXProjectModuleLabel</key>
-								<string>CKDictionarizerEngine.m</string>
+								<string>CKEngine.h</string>
 								<key>PBXSplitModuleInNavigatorKey</key>
 								<dict>
 									<key>Split0</key>
@@ -335,11 +334,11 @@
 										<key>PBXProjectModuleGUID</key>
 										<string>433104F80F1280740091B39C</string>
 										<key>PBXProjectModuleLabel</key>
-										<string>CKDictionarizerEngine.m</string>
+										<string>CKEngine.h</string>
 										<key>_historyCapacity</key>
 										<integer>0</integer>
 										<key>bookmark</key>
-										<string>438E3AA111A599EE0028F47F</string>
+										<string>4356347711B03EB600D8A3DC</string>
 										<key>history</key>
 										<array>
 											<string>43A20EB5116DD04D00BA930A</string>
@@ -365,14 +364,14 @@
 											<string>438E3A9511A599EE0028F47F</string>
 											<string>438E3A9611A599EE0028F47F</string>
 											<string>438E3A9711A599EE0028F47F</string>
-											<string>438E3A9811A599EE0028F47F</string>
 											<string>438E3A9911A599EE0028F47F</string>
 											<string>438E3A9A11A599EE0028F47F</string>
 											<string>438E3A9B11A599EE0028F47F</string>
 											<string>438E3A9D11A599EE0028F47F</string>
 											<string>438E3A9E11A599EE0028F47F</string>
 											<string>438E3A9F11A599EE0028F47F</string>
-											<string>438E3AA011A599EE0028F47F</string>
+											<string>4356347511B03EB600D8A3DC</string>
+											<string>4356347611B03EB600D8A3DC</string>
 										</array>
 									</dict>
 									<key>SplitCount</key>
@@ -386,18 +385,18 @@
 							<key>GeometryConfiguration</key>
 							<dict>
 								<key>Frame</key>
-								<string>{{0, 0}, {1169, 481}}</string>
+								<string>{{0, 0}, {1169, 474}}</string>
 								<key>RubberWindowFrame</key>
 								<string>0 128 1440 750 0 0 1440 878 </string>
 							</dict>
 							<key>Module</key>
 							<string>PBXNavigatorGroup</string>
 							<key>Proportion</key>
-							<string>481pt</string>
+							<string>474pt</string>
 						</dict>
 						<dict>
 							<key>Proportion</key>
-							<string>223pt</string>
+							<string>230pt</string>
 							<key>Tabs</key>
 							<array>
 								<dict>
@@ -411,7 +410,9 @@
 									<key>GeometryConfiguration</key>
 									<dict>
 										<key>Frame</key>
-										<string>{{10, 27}, {1169, 196}}</string>
+										<string>{{10, 27}, {1169, 203}}</string>
+										<key>RubberWindowFrame</key>
+										<string>0 128 1440 750 0 0 1440 878 </string>
 									</dict>
 									<key>Module</key>
 									<string>XCDetailModule</string>
@@ -466,8 +467,6 @@
 									<dict>
 										<key>Frame</key>
 										<string>{{10, 27}, {1169, 196}}</string>
-										<key>RubberWindowFrame</key>
-										<string>0 128 1440 750 0 0 1440 878 </string>
 									</dict>
 									<key>Module</key>
 									<string>PBXBuildResultsModule</string>
@@ -495,11 +494,11 @@
 			</array>
 			<key>TableOfContents</key>
 			<array>
-				<string>438E395D11A56B620028F47F</string>
+				<string>4356347811B03EB600D8A3DC</string>
 				<string>1CA23ED40692098700951B8B</string>
-				<string>438E395E11A56B620028F47F</string>
+				<string>4356347911B03EB600D8A3DC</string>
 				<string>433104F70F1280740091B39C</string>
-				<string>438E395F11A56B620028F47F</string>
+				<string>4356347A11B03EB600D8A3DC</string>
 				<string>1CA23EDF0692099D00951B8B</string>
 				<string>1CA23EE00692099D00951B8B</string>
 				<string>1CA23EE10692099D00951B8B</string>
