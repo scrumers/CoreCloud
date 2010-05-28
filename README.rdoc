@@ -2,20 +2,35 @@
 CloudKit is compiled as a static library, and the easiest way to add it to your project is to use Xcode’s “dependent project” facilities. Here is how:
 
 Clone the repository and make sure you store it in a permanent place, because Xcode will need to reference the files every time you compile your project.
+
 *Drag and drop the “CloudKit.xcodeproj” file under “cloudkit-objc/platform/iPhone” onto the root of your Xcode project’s “Groups and Files” sidebar.
+
 *A dialog will appear — make sure “Copy items” is unchecked and “Reference Type” is “Relative to Project” before clicking “Add”.
+
 *Link the CloudKit static library to your project:
+
 *Doubleclick the “CloudKit.xcodeproj” item that has just been added to the sidebar
+
 *Go to the “Details” table and you will see a single item: libCloudKit.a.
+
 *Check the checkbox on the far right of libCloudKit.a.
+
 *Add CloudKit as a dependency of your project, so Xcode compiles it whenever you compile your project:
+
 *Expand the “Targets” section of the sidebar and double-click your application’s target.
+
 *Go to the “General” tab and you will see a “Direct Dependencies” section.
+
 *Click the “+” button, select “CloudKit”, and click “Add Target”.
+
 Tell your project where to find the CloudKit headers:
+
 *Open your “Project Settings” and go to the “Build” tab.
+
 *Look for “Header Search Paths” and doubleclick it.
+
 *Add the relative path from your project’s directory to the “cloudkit-objc/src” directory.
+
 While you are in Project Settings, go to “Other Linker Flags” under the “Linker” section, and add “-ObjC” and “-all_load” to the list of flags.
 You’re ready to go. Just #import “CloudKit/CloudKit.h” anywhere you want to use CloudKit classes in your project.
 
