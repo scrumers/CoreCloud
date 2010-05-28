@@ -26,29 +26,29 @@ CloudKit is based on an engine chain. The order you build your chain is importan
 
   - (void)setUpCloudKit {
     //This engine will define the correct URL, according your Routes.plist
-  	CKRoutesEngine *routesEngine;
-  	NSURL *routesURL= [[NSBundle mainBundle] URLForResource:@"Routes" withExtension:@"plist"];
-  	routesEngine= [[CKRoutesEngine alloc] initWithRoutesURL:routesURL];
-  	[[CKCloudKitManager defaultConfiguration] addEngine:routesEngine withKey:@"RouteEngine"];
-  	[routesEngine release];
-	  
-	  //This engine will eventually convert the objects your POSTing into NSDictionary
-  	CKDictionarizerEngine *dictionarizerEngine;
-  	dictionarizerEngine= [[CKDictionarizerEngine alloc] initWithLocalPrefix:@"S"]; 
-  	[[CKCloudKitManager defaultConfiguration] addEngine:dictionarizerEngine withKey:@"DictionarizerEngine"];
-  	[dictionarizerEngine release];
-	
-	  //This engine will convert the previous dictionary into JSON
-  	CKJSONEngine *JSONEngine;
-  	JSONEngine= [[CKJSONEngine alloc] init];
-  	[[CKCloudKitManager defaultConfiguration] addEngine:JSONEngine withKey:@"JSONEngine"];
-  	[JSONEngine release];
-	  
-	  //This engine will add the authentication elements on the request 
-  	CKHTTPBasicAuthenticationEngine *HTTPBasicEngine;
-  	HTTPBasicEngine= [[CKHTTPBasicAuthenticationEngine alloc] init];
-  	[[CKCloudKitManager defaultConfiguration] addEngine:HTTPBasicEngine withKey:@"HTTPBasicEngine"];
-  	[HTTPBasicEngine release];
+    CKRoutesEngine *routesEngine;
+    NSURL *routesURL= [[NSBundle mainBundle] URLForResource:@"Routes" withExtension:@"plist"];
+    routesEngine= [[CKRoutesEngine alloc] initWithRoutesURL:routesURL];
+    [[CKCloudKitManager defaultConfiguration] addEngine:routesEngine withKey:@"RouteEngine"];
+    [routesEngine release];
+
+    //This engine will eventually convert the objects your POSTing into NSDictionary
+    CKDictionarizerEngine *dictionarizerEngine;
+    dictionarizerEngine= [[CKDictionarizerEngine alloc] initWithLocalPrefix:@"S"]; 
+    [[CKCloudKitManager defaultConfiguration] addEngine:dictionarizerEngine withKey:@"DictionarizerEngine"];
+    [dictionarizerEngine release];
+
+    //This engine will convert the previous dictionary into JSON
+    CKJSONEngine *JSONEngine;
+    JSONEngine= [[CKJSONEngine alloc] init];
+    [[CKCloudKitManager defaultConfiguration] addEngine:JSONEngine withKey:@"JSONEngine"];
+    [JSONEngine release];
+
+    //This engine will add the authentication elements on the request 
+    CKHTTPBasicAuthenticationEngine *HTTPBasicEngine;
+    HTTPBasicEngine= [[CKHTTPBasicAuthenticationEngine alloc] init];
+    [[CKCloudKitManager defaultConfiguration] addEngine:HTTPBasicEngine withKey:@"HTTPBasicEngine"];
+    [HTTPBasicEngine release];
   }	
 
   - (void)applicationDidFinishLaunching:(UIApplication *)application {
@@ -58,18 +58,17 @@ CloudKit is based on an engine chain. The order you build your chain is importan
 Once you've configured CloudKit, you can use it:
 
   - (void)loadDashboard:(id)sender {
-  	NSMutableURLRequest *request;
-		request= [NSMutableURLRequest requestWithURL:[NSURL URLWithString:@"user#dashboard"]];
-		[[CKCloudKitManager defaultConfiguration] sendRequest:request withParams:nil andDelegate:self];
+    NSMutableURLRequest *request;
+    request= [NSMutableURLRequest requestWithURL:[NSURL URLWithString:@"user#dashboard"]];
+    [[CKCloudKitManager defaultConfiguration] sendRequest:request withParams:nil andDelegate:self];
   }
 
   - (void)request:(NSMutableURLRequest *)request didSucceedWithData:(id)data {
-  	[[NSNotificationCenter defaultCenter] postNotificationName:SAccessGrantedNotification object:nil];
+    // data usage
   }
 
   - (void)request:(NSMutableURLRequest *)request didFailWithError:(NSError *)error {
-  	[[UIAlertView alertWithError:error] show];
-  	//[tableView setState:MTableViewStateError];
+  	// error handling
   }
 
 That's it, your getting some objects from the cloud.
