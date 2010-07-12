@@ -37,8 +37,8 @@ localPrefix= _localPrefix;
 	return self;
 }
 
-- (void)processRequest:(NSMutableURLRequest **)request withParams:(NSDictionary *)params {
-	id rawBody= [params valueForKey:@"HTTPBody"];
+- (void)processRequest:(NSMutableURLRequest **)request withParams:(NSMutableDictionary **)params {
+	id rawBody= [*params valueForKey:@"HTTPBody"];
 	if (rawBody != nil) {
 		NSDictionary *processedBody;
 		if ([rawBody isKindOfClass:[NSArray class]]) {
@@ -46,7 +46,7 @@ localPrefix= _localPrefix;
 		} else {
 			processedBody= [self dictionaryFromObject:rawBody];
 		}
-		[*request setHTTPBody:processedBody];
+		[*params setValue:processedBody forKey:@"HTTPBody"];
 	}
 }
 
@@ -102,11 +102,12 @@ localPrefix= _localPrefix;
 			propertyName = [NSString stringWithCString:property_getName(*prop) encoding:NSUTF8StringEncoding];
 			if ([object respondsToSelector:NSSelectorFromString(propertyName)]) {
 				//NSString *type = [NSString stringWithCString:property_getAttributes(*prop) encoding:NSUTF8StringEncoding];
-				[dict setValue:[object performSelector:NSSelectorFromString(propertyName)] forKey:propertyName];
+				[dict setValue:[object performSelector:NSSelectorFromString(propertyName)] forKey:[propertyName underscore]];
 			}
 		}
 		free(propList);
 	}
+	NSLog(@"%@", dict);
 	return dict;
 }
 
@@ -124,9 +125,10 @@ localPrefix= _localPrefix;
 	return result;
 }
 
+
 - (NSString *)remoteClassnameFor:(NSString *)classname {
 	
-	return ;
+	return nil;
 }
 
 - (void) dealloc {

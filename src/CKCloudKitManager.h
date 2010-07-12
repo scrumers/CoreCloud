@@ -13,11 +13,14 @@
 @interface CKCloudKitManager : NSObject {
 	NSMutableArray *ordered_engines;
 	NSMutableDictionary *engines;
+	NSMutableDictionary *droppedEngines;
 }
 
 + (CKCloudKitManager *)defaultConfiguration;
 - (void)addEngine:(NSObject<CKEngine> *)engine withKey:(NSString *)key;
 - (NSObject<CKEngine> *)engineForKey:(NSString *)key;
+- (void)dropEngineWithKey:(NSString *)key;
+- (void)restaureDroppedEngines;
 
 - (void)sendRequest:(NSMutableURLRequest *)request withParams:(NSDictionary *)params andDelegate:(id)delegate;
 - (void)sendRequest:(NSMutableURLRequest *)request withParams:(NSDictionary *)params;

@@ -28,14 +28,15 @@ basic_authorization= _basic_authorization;
 	return self;
 }
 
-- (void)processRequest:(NSMutableURLRequest **)request withParams:(NSDictionary *)params {
+- (void)processRequest:(NSMutableURLRequest **)request withParams:(NSMutableDictionary **)params {
 	if (self.basic_authorization == nil) {
 		NSData *encodedCredentials;
 		encodedCredentials= [[NSString stringWithFormat:@"%@:%@", self.username, self.password] dataUsingEncoding:NSASCIIStringEncoding];
-		self.basic_authorization= [NSString stringWithFormat:@"Basic %@", [NSData base64forData:encodedCredentials]];		
+		self.basic_authorization= [NSString stringWithFormat:@"Basic %@", [NSData base64stringforData:encodedCredentials]];		
 	}
 	[*request addValue:self.basic_authorization forHTTPHeaderField:@"Authorization"];
 }
+
 
 - (void)processResponse:(NSHTTPURLResponse **)response withParams:(NSDictionary *)params data:(id *)data andError:(NSError **)error {
 }

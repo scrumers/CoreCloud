@@ -42,9 +42,9 @@
 	return self;
 }
 
-- (void)processRequest:(NSMutableURLRequest **)request withParams:(NSDictionary *)params {
+- (void)processRequest:(NSMutableURLRequest **)request withParams:(NSMutableDictionary **)params {
 	NSString *keyURL= [[*request URL] absoluteString];
-	NSURL *processedURL= [self URLForKey:keyURL withDictionary:params];
+	NSURL *processedURL= [self URLForKey:keyURL withDictionary:*params];
 	[*request setURL:processedURL];
 	NSString *method=	[self HTTPMethodForKey:keyURL];
 	if (method != nil) {
@@ -69,6 +69,7 @@
 	NSString *rawPath, *processedPath;
 	NSDictionary *temporaryConstants;
 	NSURL *processedURL;
+
 	temporaryConstants= [NSDictionary dictionaryWithDictionary:constants 
 																							 andDictionary:newConstants];
 	rawPath= [[routes valueForKey:key] valueForKey:@"url"];

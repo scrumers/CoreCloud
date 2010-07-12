@@ -25,11 +25,15 @@
 @implementation CKJSONEngine
 
 
-- (void)processRequest:(NSMutableURLRequest **)request withParams:(NSDictionary *)params {
+- (void)processRequest:(NSMutableURLRequest **)request withParams:(NSMutableDictionary **)params {
 	NSString *path;
 	path= [[[*request URL] absoluteString] stringByAppendingString:@".json"];
 	[*request setURL:[NSURL URLWithString:path]];
 	[*request addValue:@"application/json" forHTTPHeaderField:@"Content-Type"];
+	[*request addValue:@"application/json" forHTTPHeaderField:@"Accept"];
+	if ([*params valueForKey:@"HTTPBody"] != nil) {
+		[*request setHTTPBody:(NSData *)[[self serializeDictionary:[*params valueForKey:@"HTTPBody"]] dataUsingEncoding:NSUTF8StringEncoding]];
+	}
 }
 
 - (void)processResponse:(NSHTTPURLResponse **)response withParams:(NSDictionary *)params data:(id *)data andError:(NSError **)error {
@@ -37,15 +41,15 @@
 }
 
 - (NSString *)serializeObject:(id)inObject {
-	return [[CJSONSerializer serializer] serializeObject:inObject];
+	return (NSString *)[[CJSONSerializer serializer] serializeObject:inObject];
 }
 
 - (NSString *)serializeArray:(NSArray *)inArray {
-	return [[CJSONSerializer serializer] serializeArray:inArray];
+	return (NSString *)[[CJSONSerializer serializer] serializeArray:inArray];
 }
 
 - (NSString *)serializeDictionary:(NSDictionary *)inDictionary {
-	return [[CJSONSerializer serializer] serializeDictionary:inDictionary];
+	return (NSString *)[[CJSONSerializer serializer] serializeDictionary:inDictionary];
 }
 
 - (id)deserialize:(NSData *)inData error:(NSError **)outError {

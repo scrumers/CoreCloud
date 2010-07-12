@@ -13,7 +13,7 @@
 
 + (NSDictionary *)dictionaryWithDictionary:(NSDictionary *)dict1 andDictionary:(NSDictionary *)dict2 {
 	NSMutableDictionary *mergedDict;
-	mergedDict= [NSDictionary dictionaryWithDictionary:dict1];
+	mergedDict= [NSMutableDictionary dictionaryWithDictionary:dict1];
 	for (id key in [dict2 allKeys]) {
 		id value;
 		if ([dict2 valueForKey:key] == nil || [dict2 valueForKey:key] == [NSNull null]) {

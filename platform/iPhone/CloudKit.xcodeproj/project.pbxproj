@@ -28,11 +28,10 @@
 		4317F0151181DB850045FF78 /* CKRoutesEngine.m in Sources */ = {isa = PBXBuildFile; fileRef = 4317F0001181DB850045FF78 /* CKRoutesEngine.m */; };
 		4317F0161181DB850045FF78 /* NSData+CloudKitAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 4317F0011181DB850045FF78 /* NSData+CloudKitAdditions.m */; };
 		4317F0171181DB850045FF78 /* NSString+InflectionSupport.m in Sources */ = {isa = PBXBuildFile; fileRef = 4317F0021181DB850045FF78 /* NSString+InflectionSupport.m */; };
-		4317F1391181E2480045FF78 /* libOAuthConsumer.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4317F0F11181E0C70045FF78 /* libOAuthConsumer.a */; settings = {ATTRIBUTES = (Required, ); }; };
-		4317F13A1181E2510045FF78 /* libFBPlatform.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4317F0E91181E0B80045FF78 /* libFBPlatform.a */; settings = {ATTRIBUTES = (Required, ); }; };
 		431C7DB411A40519004F2B13 /* libTouchJSON.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 431C7D7611A402FA004F2B13 /* libTouchJSON.a */; };
 		431C7F5E11A41D93004F2B13 /* NSDictionary+CloudKitAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = 431C7F5C11A41D93004F2B13 /* NSDictionary+CloudKitAdditions.h */; };
 		431C7F5F11A41D93004F2B13 /* NSDictionary+CloudKitAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 431C7F5D11A41D93004F2B13 /* NSDictionary+CloudKitAdditions.m */; };
+		432D5B6B11E7163E000F86DD /* libOAuthConsumer.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4317F0F11181E0C70045FF78 /* libOAuthConsumer.a */; };
 		435A08CE1191C14A00030F4C /* CKEngine.h in Headers */ = {isa = PBXBuildFile; fileRef = 435A08CD1191C14A00030F4C /* CKEngine.h */; };
 		4378EF7A1181D6AA004697B8 /* CloudKit_Prefix.pch in Headers */ = {isa = PBXBuildFile; fileRef = 4378EF791181D6AA004697B8 /* CloudKit_Prefix.pch */; };
 		438E39B911A5834F0028F47F /* CKDictionarizerEngine.h in Headers */ = {isa = PBXBuildFile; fileRef = 438E39B711A5834F0028F47F /* CKDictionarizerEngine.h */; };
@@ -55,13 +54,6 @@
 			proxyType = 2;
 			remoteGlobalIDString = D2AAC07E0554694100DB518D;
 			remoteInfo = OAuthConsumer;
-		};
-		4317F1291181E22F0045FF78 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 43A20FE9116DDC3800BA930A /* FBConnect.xcodeproj */;
-			proxyType = 1;
-			remoteGlobalIDString = BE61A71A0DE2551300D4F7B9;
-			remoteInfo = FBPlatform;
 		};
 		4317F12B1181E2320045FF78 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -129,9 +121,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				AACBBE4A0F95108600F1A2B1 /* Foundation.framework in Frameworks */,
-				4317F1391181E2480045FF78 /* libOAuthConsumer.a in Frameworks */,
-				4317F13A1181E2510045FF78 /* libFBPlatform.a in Frameworks */,
 				431C7DB411A40519004F2B13 /* libTouchJSON.a in Frameworks */,
+				432D5B6B11E7163E000F86DD /* libOAuthConsumer.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -395,7 +386,6 @@
 			buildRules = (
 			);
 			dependencies = (
-				4317F12A1181E22F0045FF78 /* PBXTargetDependency */,
 				4317F12C1181E2320045FF78 /* PBXTargetDependency */,
 				431C7DB611A40525004F2B13 /* PBXTargetDependency */,
 			);
@@ -486,11 +476,6 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		4317F12A1181E22F0045FF78 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = FBPlatform;
-			targetProxy = 4317F1291181E22F0045FF78 /* PBXContainerItemProxy */;
-		};
 		4317F12C1181E2320045FF78 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = OAuthConsumer;
@@ -525,6 +510,10 @@
 					"\"$(SRCROOT)/../../lib/YAJL-objc\"",
 					"\"$(SRCROOT)/../../lib/YAJL-objc/bin\"",
 				);
+				OTHER_LDFLAGS = (
+					"-all_load",
+					"-ObjC",
+				);
 				PRODUCT_NAME = CloudKit;
 			};
 			name = Debug;
@@ -545,6 +534,10 @@
 					"\"$(SRCROOT)/../../lib/YAJL\"",
 					"\"$(SRCROOT)/../../lib/YAJL-objc\"",
 					"\"$(SRCROOT)/../../lib/YAJL-objc/bin\"",
+				);
+				OTHER_LDFLAGS = (
+					"-all_load",
+					"-ObjC",
 				);
 				PRODUCT_NAME = CloudKit;
 			};
@@ -579,7 +572,10 @@
 				GCC_C_LANGUAGE_STANDARD = c99;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				OTHER_LDFLAGS = "-ObjC";
+				OTHER_LDFLAGS = (
+					"-ObjC",
+					"-all_load",
+				);
 				PREBINDING = NO;
 				SDKROOT = iphoneos4.0;
 			};

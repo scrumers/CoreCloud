@@ -12,7 +12,7 @@
 
 // From: http://www.cocoadev.com/index.pl?BaseSixtyFour
 
-+ (NSString*)base64forData:(NSData*)theData {
++ (NSString*)base64stringforData:(NSData*)theData {
 	
 	const uint8_t* input = (const uint8_t*)[theData bytes];
 	NSInteger length = [theData length];

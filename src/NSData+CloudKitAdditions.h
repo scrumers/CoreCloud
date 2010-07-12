@@ -11,6 +11,6 @@
 
 @interface NSData (CloudKit)
 
-+ (NSString*)base64forData:(NSData*)theData;
++ (NSString*)base64stringforData:(NSData*)theData;
 
 @end

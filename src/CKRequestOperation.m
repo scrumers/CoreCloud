@@ -8,6 +8,7 @@
 
 #import "CKRequestOperation.h"
 #import "CKCloudKitManager.h"
+#import "CKRequestDelegate.h"
 #import "CKEngine.h"
 
 @implementation CKRequestOperation
@@ -23,7 +24,7 @@
 		request = [inRequest retain];
 		delegate = [inDelegate retain];
 		configuration= [inConfiguration retain];
-		params= [inParams retain];
+		params= [[NSMutableDictionary alloc] initWithDictionary:inParams];
 	}
 	return self;
 }
@@ -31,7 +32,7 @@
 + (id)operationWithRequest:(NSMutableURLRequest *)inRequest 
 										params:(NSDictionary *)inParams 
 									delegate:(id)inDelegate 
-					andCongiguration:(CKCloudKitManager *)inConfiguration {
+					andConfiguration:(CKCloudKitManager *)inConfiguration {
 	CKRequestOperation *operation;
 	operation = [[CKRequestOperation alloc] initWithRequest:inRequest 
 																									 params:inParams 
@@ -45,8 +46,11 @@
 	NSArray *ordered_engines= [configuration ordered_engines];
 	for (id engine_name in ordered_engines) {
 		id<CKEngine> engine= [configuration engineForKey:engine_name];
-		[engine processRequest:&request withParams:params];
+		[engine processRequest:&request withParams:&params];
 	}
+	NSLog(@"%@", [request URL]);
+	NSLog(@"%@", [request HTTPBody]);
+	
 	NSHTTPURLResponse * response;
 	id rawData = [NSURLConnection sendSynchronousRequest:request 
 																			returningResponse:&response 

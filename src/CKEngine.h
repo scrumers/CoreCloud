@@ -12,7 +12,7 @@
 @protocol CKEngine
 
 @required
-- (void)processRequest:(NSMutableURLRequest **)request withParams:(NSDictionary *)params;
-- (void)processResponse:(NSHTTPURLResponse **)response withParams:(NSDictionary *)params andData:(id *)data;
+- (void)processRequest:(NSMutableURLRequest **)request withParams:(NSMutableDictionary **)params;
+- (void)processResponse:(NSHTTPURLResponse **)response withParams:(NSDictionary *)params data:(id *)data andError:(NSError **)error;
 
 @end

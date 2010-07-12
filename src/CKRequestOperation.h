@@ -14,9 +14,9 @@
 
 @interface CKRequestOperation : NSOperation {
 	NSMutableURLRequest * request;
-	id<CKRequestDelegate> delegate;
+	NSObject<CKRequestDelegate> * delegate;
 	CKCloudKitManager *configuration;
-	NSDictionary *params;
+	NSMutableDictionary *params;
 	NSData * data;
 }
 
@@ -28,6 +28,6 @@
 + (id)operationWithRequest:(NSMutableURLRequest *)inRequest 
 										params:(NSDictionary *)inParams 
 									delegate:(id)inDelegate 
-					andCongiguration:(CKCloudKitManager *)inConfiguration;
+					andConfiguration:(CKCloudKitManager *)inConfiguration;
 
 @end

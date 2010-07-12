@@ -8,6 +8,7 @@
 
 #import "CKCloudKitManager.h"
 #import "CKRequestManager.h"
+#import "CKRequestOperation.h"
 #import "CKEngine.h"
 
 @implementation CKCloudKitManager
@@ -19,6 +20,7 @@
 	if (self != nil) {
 		ordered_engines= [[NSMutableArray alloc] init];
 		engines= [[NSMutableDictionary alloc] init]; 
+		droppedEngines= [[NSMutableDictionary alloc] init];
 	}
 	return self;
 }
@@ -36,6 +38,18 @@
 	[engines setObject:engine forKey:key];
 }
 
+- (void)dropEngineWithKey:(NSString *)key {
+	int index= [ordered_engines indexOfObject:key];
+	[ordered_engines removeObject:key];
+	[droppedEngines setValue:[NSNumber numberWithInt:index] forKey:key];
+}
+
+- (void)restaureDroppedEngines {
+	for (id key in [droppedEngines allKeys]) {
+		[ordered_engines insertObject:key atIndex:[[droppedEngines valueForKey:key] intValue]];
+	}
+}
+
 - (NSObject<CKEngine> *)engineForKey:(NSString *)key {
 	return [engines objectForKey:key];
 }
@@ -45,7 +59,7 @@
 	requestOperation= [CKRequestOperation operationWithRequest:request
 																											params:params
 																										delegate:delegate 
-																						andCongiguration:self];
+																						andConfiguration:self];
 	[[CKRequestManager sharedManager] processRequestOperation:requestOperation];
 }
 
@@ -65,6 +79,7 @@
 - (void)dealloc {
 	[engines release];
 	[ordered_engines release];
+	[droppedEngines release];
 	[super dealloc];
 }
 

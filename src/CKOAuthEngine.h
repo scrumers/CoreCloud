@@ -20,8 +20,9 @@
 	id <OASignatureProviding, NSObject> _signatureProvider;
 }
 
-- (void)setupWithDictionary:(NSDictionary *)dictionary; 
-- (NSMutableURLRequest *)signRequest:(NSMutableURLRequest *)request;
+- (void)processRequest:(NSMutableURLRequest **)request withParams:(NSMutableDictionary **)params;
+- (void)processResponse:(NSHTTPURLResponse **)response withParams:(NSDictionary *)params data:(id *)data andError:(NSError **)error;
+
 
 @property(nonatomic, retain) OAToken * token;
 @property(nonatomic, retain) OAConsumer * consumer;

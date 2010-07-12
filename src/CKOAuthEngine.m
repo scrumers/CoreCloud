@@ -21,9 +21,13 @@ consumer = _consumer;
 @synthesize 
 signatureProvider = _signatureProvider;
 
-- (void)setupWithDictionary:(NSDictionary *)dictionary {
-	
+
+- (void)processRequest:(NSMutableURLRequest **)request withParams:(NSMutableDictionary **)params {
 }
+
+- (void)processResponse:(NSHTTPURLResponse **)response withParams:(NSDictionary *)params data:(id *)data andError:(NSError **)error {
+}
+
 
 - (void) dealloc {
 	[_token release];
