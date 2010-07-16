@@ -8,7 +8,6 @@
 
 #import "CKOAuthEngine.h"
 #import "OAuthConsumer/OAuthConsumer.h"
-#import "FBConnect/FBConnect.h"
 
 @implementation CKOAuthEngine
 

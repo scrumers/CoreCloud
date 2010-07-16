@@ -7,8 +7,6 @@
  *
  */
 
-#import "CDataScanner.h"
-#import "CDataScanner_Extensions.h"
 #import "CJSONDataSerializer.h"
 #import "CJSONDeserializer.h"
 #import "CJSONScanner.h"

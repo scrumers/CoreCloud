@@ -107,8 +107,8 @@ localPrefix= _localPrefix;
 		}
 		free(propList);
 	}
-	NSLog(@"%@", dict);
-	return dict;
+	return [NSDictionary dictionaryWithObject:dict
+																		 forKey:[self remoteClassnameFor:NSStringFromClass([object class])]];
 }
 
 - (NSDictionary *)dictionaryFromObjects:(NSArray *)objects {
@@ -127,8 +127,12 @@ localPrefix= _localPrefix;
 
 
 - (NSString *)remoteClassnameFor:(NSString *)classname {
-	
-	return nil;
+	NSString *result= classname;
+	if (self.localPrefix!=nil) {
+		result= [result substringFromIndex:[self.localPrefix length]];
+	}
+	result = [result lowercaseString];
+	return result;
 }
 
 - (void) dealloc {

@@ -30,7 +30,6 @@
 	path= [[[*request URL] absoluteString] stringByAppendingString:@".json"];
 	[*request setURL:[NSURL URLWithString:path]];
 	[*request addValue:@"application/json" forHTTPHeaderField:@"Content-Type"];
-	[*request addValue:@"application/json" forHTTPHeaderField:@"Accept"];
 	if ([*params valueForKey:@"HTTPBody"] != nil) {
 		[*request setHTTPBody:(NSData *)[[self serializeDictionary:[*params valueForKey:@"HTTPBody"]] dataUsingEncoding:NSUTF8StringEncoding]];
 	}

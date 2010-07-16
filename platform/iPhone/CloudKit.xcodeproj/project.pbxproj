@@ -28,11 +28,11 @@
 		4317F0151181DB850045FF78 /* CKRoutesEngine.m in Sources */ = {isa = PBXBuildFile; fileRef = 4317F0001181DB850045FF78 /* CKRoutesEngine.m */; };
 		4317F0161181DB850045FF78 /* NSData+CloudKitAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 4317F0011181DB850045FF78 /* NSData+CloudKitAdditions.m */; };
 		4317F0171181DB850045FF78 /* NSString+InflectionSupport.m in Sources */ = {isa = PBXBuildFile; fileRef = 4317F0021181DB850045FF78 /* NSString+InflectionSupport.m */; };
-		431C7DB411A40519004F2B13 /* libTouchJSON.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 431C7D7611A402FA004F2B13 /* libTouchJSON.a */; };
 		431C7F5E11A41D93004F2B13 /* NSDictionary+CloudKitAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = 431C7F5C11A41D93004F2B13 /* NSDictionary+CloudKitAdditions.h */; };
 		431C7F5F11A41D93004F2B13 /* NSDictionary+CloudKitAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 431C7F5D11A41D93004F2B13 /* NSDictionary+CloudKitAdditions.m */; };
-		432D5B6B11E7163E000F86DD /* libOAuthConsumer.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4317F0F11181E0C70045FF78 /* libOAuthConsumer.a */; };
+		4322F74311EB3E4F00A9CEF0 /* libTouchJSON.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 431C7D7611A402FA004F2B13 /* libTouchJSON.a */; };
 		435A08CE1191C14A00030F4C /* CKEngine.h in Headers */ = {isa = PBXBuildFile; fileRef = 435A08CD1191C14A00030F4C /* CKEngine.h */; };
+		4377A26E11EB3EDE00D1909C /* libOAuthConsumer.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4317F0F11181E0C70045FF78 /* libOAuthConsumer.a */; };
 		4378EF7A1181D6AA004697B8 /* CloudKit_Prefix.pch in Headers */ = {isa = PBXBuildFile; fileRef = 4378EF791181D6AA004697B8 /* CloudKit_Prefix.pch */; };
 		438E39B911A5834F0028F47F /* CKDictionarizerEngine.h in Headers */ = {isa = PBXBuildFile; fileRef = 438E39B711A5834F0028F47F /* CKDictionarizerEngine.h */; };
 		438E39BA11A5834F0028F47F /* CKDictionarizerEngine.m in Sources */ = {isa = PBXBuildFile; fileRef = 438E39B811A5834F0028F47F /* CKDictionarizerEngine.m */; };
@@ -55,13 +55,6 @@
 			remoteGlobalIDString = D2AAC07E0554694100DB518D;
 			remoteInfo = OAuthConsumer;
 		};
-		4317F12B1181E2320045FF78 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 43A20D3C116DC1D700BA930A /* OAuthConsumer.xcodeproj */;
-			proxyType = 1;
-			remoteGlobalIDString = D2AAC07D0554694100DB518D;
-			remoteInfo = OAuthConsumer;
-		};
 		431C7D7511A402FA004F2B13 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 431C7D6E11A402FA004F2B13 /* TouchJSON.xcodeproj */;
@@ -69,12 +62,19 @@
 			remoteGlobalIDString = D2AAC07E0554694100DB518D;
 			remoteInfo = TouchJSON;
 		};
-		431C7DB511A40525004F2B13 /* PBXContainerItemProxy */ = {
+		4322F73D11EB3E4600A9CEF0 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 431C7D6E11A402FA004F2B13 /* TouchJSON.xcodeproj */;
 			proxyType = 1;
 			remoteGlobalIDString = D2AAC07D0554694100DB518D;
 			remoteInfo = TouchJSON;
+		};
+		4377A26F11EB3EEA00D1909C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 43A20D3C116DC1D700BA930A /* OAuthConsumer.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = D2AAC07D0554694100DB518D;
+			remoteInfo = OAuthConsumer;
 		};
 /* End PBXContainerItemProxy section */
 
@@ -121,8 +121,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				AACBBE4A0F95108600F1A2B1 /* Foundation.framework in Frameworks */,
-				431C7DB411A40519004F2B13 /* libTouchJSON.a in Frameworks */,
-				432D5B6B11E7163E000F86DD /* libOAuthConsumer.a in Frameworks */,
+				4322F74311EB3E4F00A9CEF0 /* libTouchJSON.a in Frameworks */,
+				4377A26E11EB3EDE00D1909C /* libOAuthConsumer.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -386,8 +386,8 @@
 			buildRules = (
 			);
 			dependencies = (
-				4317F12C1181E2320045FF78 /* PBXTargetDependency */,
-				431C7DB611A40525004F2B13 /* PBXTargetDependency */,
+				4322F73E11EB3E4600A9CEF0 /* PBXTargetDependency */,
+				4377A27011EB3EEA00D1909C /* PBXTargetDependency */,
 			);
 			name = CloudKit;
 			productName = CloudKit;
@@ -476,15 +476,15 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		4317F12C1181E2320045FF78 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = OAuthConsumer;
-			targetProxy = 4317F12B1181E2320045FF78 /* PBXContainerItemProxy */;
-		};
-		431C7DB611A40525004F2B13 /* PBXTargetDependency */ = {
+		4322F73E11EB3E4600A9CEF0 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = TouchJSON;
-			targetProxy = 431C7DB511A40525004F2B13 /* PBXContainerItemProxy */;
+			targetProxy = 4322F73D11EB3E4600A9CEF0 /* PBXContainerItemProxy */;
+		};
+		4377A27011EB3EEA00D1909C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = OAuthConsumer;
+			targetProxy = 4377A26F11EB3EEA00D1909C /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -493,7 +493,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				ARCHS = armv6;
 				COPY_PHASE_STRIP = NO;
 				DSTROOT = /tmp/CloudKit.dst;
 				GCC_DYNAMIC_NO_PIC = NO;
@@ -502,6 +502,10 @@
 				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = CloudKit_Prefix.pch;
+				HEADER_SEARCH_PATHS = (
+					"../../lib/touchjson-objc/src//**",
+					"../../lib/oauth-objc/src//**",
+				);
 				INSTALL_PATH = /usr/local/lib;
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
@@ -515,6 +519,7 @@
 					"-ObjC",
 				);
 				PRODUCT_NAME = CloudKit;
+				VALID_ARCHS = armv6;
 			};
 			name = Debug;
 		};
@@ -522,11 +527,15 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				ARCHS = armv6;
 				DSTROOT = /tmp/CloudKit.dst;
 				GCC_MODEL_TUNING = G5;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = CloudKit_Prefix.pch;
+				HEADER_SEARCH_PATHS = (
+					"../../lib/touchjson-objc/src//**",
+					"../../lib/oauth-objc/src//**",
+				);
 				INSTALL_PATH = /usr/local/lib;
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
@@ -540,26 +549,21 @@
 					"-ObjC",
 				);
 				PRODUCT_NAME = CloudKit;
+				VALID_ARCHS = armv6;
 			};
 			name = Release;
 		};
 		1DEB922308733DC00010E9CD /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
 				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
 				GCC_C_LANGUAGE_STANDARD = c99;
 				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				HEADER_SEARCH_PATHS = (
-					"./../../lib/touchjson-objc/src//**",
-					"./../../lib/oauth-objc/src//**",
-					"./../../lib/fbconnect-objc/src//**",
-				);
-				OTHER_LDFLAGS = (
-					"-ObjC",
-					"-all_load",
-				);
+				HEADER_SEARCH_PATHS = "";
+				OTHER_LDFLAGS = "";
 				PREBINDING = NO;
 				SDKROOT = iphoneos4.0;
 			};
@@ -568,14 +572,13 @@
 		1DEB922408733DC00010E9CD /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
 				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
 				GCC_C_LANGUAGE_STANDARD = c99;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				OTHER_LDFLAGS = (
-					"-ObjC",
-					"-all_load",
-				);
+				HEADER_SEARCH_PATHS = "";
+				OTHER_LDFLAGS = "";
 				PREBINDING = NO;
 				SDKROOT = iphoneos4.0;
 			};

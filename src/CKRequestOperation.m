@@ -49,7 +49,7 @@
 		[engine processRequest:&request withParams:&params];
 	}
 	NSLog(@"%@", [request URL]);
-	NSLog(@"%@", [request HTTPBody]);
+	NSLog(@"%@", [[NSString alloc] initWithData:[request HTTPBody] encoding:NSUTF8StringEncoding]);
 	
 	NSHTTPURLResponse * response;
 	id rawData = [NSURLConnection sendSynchronousRequest:request 
