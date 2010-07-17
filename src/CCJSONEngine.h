@@ -1,15 +1,15 @@
 //
-//  CKJSONEngine.h
-//  CloudKit
+//  CCJSONEngine.h
+//  CoreCloud
 //
 //  Created by Ludovic Galabru on 08/04/10.
 //  Copyright 2010 Software Engineering Task Force. All rights reserved.
 //
 
 #import <Foundation/Foundation.h>
-#import "CKEngine.h"
+#import "CCEngine.h"
 
-@interface CKJSONEngine : NSObject <CKEngine> {
+@interface CCJSONEngine : NSObject <CCEngine> {
 
 }
 

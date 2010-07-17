@@ -1,24 +1,24 @@
 //
-//  CKRequestOperation.m
+//  CCRequestOperation.m
 //  Scrumers
 //
 //  Created by Ludovic Galabru on 27/07/09.
 //  Copyright 2009 Scrumers. All rights reserved.
 //
 
-#import "CKRequestOperation.h"
-#import "CKCloudKitManager.h"
-#import "CKRequestDelegate.h"
-#import "CKEngine.h"
+#import "CCRequestOperation.h"
+#import "CCManager.h"
+#import "CCRequestDelegate.h"
+#import "CCEngine.h"
 
-@implementation CKRequestOperation
+@implementation CCRequestOperation
 
 
 
 - (id)initWithRequest:(NSMutableURLRequest *)inRequest 
 							 params:(NSDictionary *)inParams 
 						 delegate:(id)inDelegate 
-		 andConfiguration:(CKCloudKitManager *)inConfiguration {
+		 andConfiguration:(CCManager *)inConfiguration {
 	self = [super init];
 	if (self != nil) {
 		request = [inRequest retain];
@@ -32,9 +32,9 @@
 + (id)operationWithRequest:(NSMutableURLRequest *)inRequest 
 										params:(NSDictionary *)inParams 
 									delegate:(id)inDelegate 
-					andConfiguration:(CKCloudKitManager *)inConfiguration {
-	CKRequestOperation *operation;
-	operation = [[CKRequestOperation alloc] initWithRequest:inRequest 
+					andConfiguration:(CCManager *)inConfiguration {
+	CCRequestOperation *operation;
+	operation = [[CCRequestOperation alloc] initWithRequest:inRequest 
 																									 params:inParams 
 																								 delegate:inDelegate
 																				 andConfiguration:inConfiguration];
@@ -45,7 +45,7 @@
 	NSError *error = nil;
 	NSArray *ordered_engines= [configuration ordered_engines];
 	for (id engine_name in ordered_engines) {
-		id<CKEngine> engine= [configuration engineForKey:engine_name];
+		id<CCEngine> engine= [configuration engineForKey:engine_name];
 		[engine processRequest:&request withParams:&params];
 	}
 	NSLog(@"%@", [request URL]);
@@ -58,7 +58,7 @@
 	
 	if (response.statusCode < 400 && error == nil) {
 		for (int index= [ordered_engines count]-1; index >= 0; index--) {
-			id<CKEngine> engine= [configuration engineForKey:[ordered_engines objectAtIndex:index]];
+			id<CCEngine> engine= [configuration engineForKey:[ordered_engines objectAtIndex:index]];
 			[engine processResponse:&response 
 									 withParams:params 
 												 data:&rawData

@@ -1,17 +1,17 @@
 //
-//  CKDictionarizerEngine.m
-//  CloudKit
+//  CCDictionarizerEngine.m
+//  CoreCloud
 //
 //  Created by Ludovic Galabru on 5/20/10.
 //  Copyright 2010 scrumers. All rights reserved.
 //
 
-#import "CKDictionarizerEngine.h"
+#import "CCDictionarizerEngine.h"
 #import "objc/runtime.h"
 #import "NSString+InflectionSupport.h"
 
 
-@interface CKDictionarizerEngine (Private)
+@interface CCDictionarizerEngine (Private)
 
 - (NSString *)localClassnameFor:(NSString *)classname;
 - (NSString *)remoteClassnameFor:(NSString *)classname;
@@ -24,7 +24,7 @@
 
 @end
 
-@implementation CKDictionarizerEngine
+@implementation CCDictionarizerEngine
 
 @synthesize
 localPrefix= _localPrefix;

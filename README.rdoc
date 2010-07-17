@@ -1,63 +1,63 @@
 == Installation
-CloudKit is compiled as a static library, and the easiest way to add it to your project is to use Xcode’s “dependent project” facilities. Here is how:
+CoreCloud is compiled as a static library, and the easiest way to add it to your project is to use Xcode’s “dependent project” facilities. Here is how:
 
 Clone the repository (and its submodules in lib/ !) and make sure you store it in a permanent place, because Xcode will need to reference the files every time you compile your project.
-* Drag and drop the “CloudKit.xcodeproj” file under “cloudkit-objc/platform/iPhone” onto the root of your Xcode project’s “Groups and Files” sidebar.
-* A dialog will appear — make sure “Copy items” is unchecked and “Reference Type” is “Relative to Project” before clicking “Add”.
-* Link the CloudKit static library to your project:
-* Doubleclick the “CloudKit.xcodeproj” item that has just been added to the sidebar
-* Go to the “Details” table and you will see a single item: libCloudKit.a.
-* Check the checkbox on the far right of libCloudKit.a.
-* Add CloudKit as a dependency of your project, so Xcode compiles it whenever you compile your project:
-* Expand the “Targets” section of the sidebar and double-click your application’s target.
+* Drag and drop the “CoreCloud.xcodeproj” file under “CoreCloud-objc/platform/iPhone” onto the root of your Xcode project’s “Groups and Files” sidebar.
+* A dialog will appear — make sure “Copy items” is uncheCCed and “Reference Type” is “Relative to Project” before clicking “Add”.
+* Link the CoreCloud static library to your project:
+* Double click the “CoreCloud.xcodeproj” item that has just been added to the sidebar
+* Go to the “Details” table and you will see a single item: libCoreCloud.a.
+* CheCC the cheCCbox on the far right of libCoreCloud.a.
+* Add CoreCloud as a dependency of your project, so Xcode compiles it whenever you compile your project:
+* Expand the “Targets” section of the sidebar and double click your application’s target.
 * Go to the “General” tab and you will see a “Direct Dependencies” section.
-* Click the “+” button, select “CloudKit”, and click “Add Target”.
+* click the “+” button, select “CoreCloud”, and click “Add Target”.
 
-Tell your project where to find the CloudKit headers:
+Tell your project where to find the CoreCloud headers:
 * Open your “Project Settings” and go to the “Build” tab.
-* Look for “Header Search Paths” and doubleclick it.
-* Add the relative path from your project’s directory to the “cloudkit-objc/src” directory.
+* Look for “Header Search Paths” and double click it.
+* Add the relative path from your project’s directory to the “CoreCloud-objc/src” directory.
 
 While you are in Project Settings, go to “Other Linker Flags” under the “Linker” section, and add “-ObjC” and “-all_load” to the list of flags.
-You’re ready to go. Just #import “CloudKit/CloudKit.h” anywhere you want to use CloudKit classes in your project.
+You’re ready to go. Just #import “CoreCloud/CoreCloud.h” anywhere you want to use CoreCloud classes in your project.
 
 == Usage
-CloudKit is based on an engine chain. The order you build your chain is important.
+CoreCloud is based on an engine chain. The order you build your chain is important.
 
-  - (void)setUpCloudKit {
+  - (void)setUpCoreCloud {
     //This engine will define the correct URL, according your Routes.plist
-    CKRoutesEngine *routesEngine;
+    CCRoutesEngine *routesEngine;
     NSURL *routesURL= [[NSBundle mainBundle] URLForResource:@"Routes" withExtension:@"plist"];
-    routesEngine= [[CKRoutesEngine alloc] initWithRoutesURL:routesURL];
-    [[CKCloudKitManager defaultConfiguration] addEngine:routesEngine withKey:@"RouteEngine"];
+    routesEngine= [[CCRoutesEngine alloc] initWithRoutesURL:routesURL];
+    [[CCManager defaultConfiguration] addEngine:routesEngine withKey:@"RouteEngine"];
     [routesEngine release];
 
     //This engine will eventually convert the objects your POSTing into NSDictionary
-    CKDictionarizerEngine *dictionarizerEngine;
-    dictionarizerEngine= [[CKDictionarizerEngine alloc] initWithLocalPrefix:@"S"]; 
-    [[CKCloudKitManager defaultConfiguration] addEngine:dictionarizerEngine withKey:@"DictionarizerEngine"];
+    CCDictionarizerEngine *dictionarizerEngine;
+    dictionarizerEngine= [[CCDictionarizerEngine alloc] initWithLocalPrefix:@"S"]; 
+    [[CCManager defaultConfiguration] addEngine:dictionarizerEngine withKey:@"DictionarizerEngine"];
     [dictionarizerEngine release];
 
     //This engine will convert the previous dictionary into JSON
-    CKJSONEngine *JSONEngine;
-    JSONEngine= [[CKJSONEngine alloc] init];
-    [[CKCloudKitManager defaultConfiguration] addEngine:JSONEngine withKey:@"JSONEngine"];
+    CCJSONEngine *JSONEngine;
+    JSONEngine= [[CCJSONEngine alloc] init];
+    [[CCManager defaultConfiguration] addEngine:JSONEngine withKey:@"JSONEngine"];
     [JSONEngine release];
 
     //This engine will add the authentication elements on the request 
-    CKHTTPBasicAuthenticationEngine *HTTPBasicEngine;
-    HTTPBasicEngine= [[CKHTTPBasicAuthenticationEngine alloc] init];
-    [[CKCloudKitManager defaultConfiguration] addEngine:HTTPBasicEngine withKey:@"HTTPBasicEngine"];
+    CCHTTPBasicAuthenticationEngine *HTTPBasicEngine;
+    HTTPBasicEngine= [[CCHTTPBasicAuthenticationEngine alloc] init];
+    [[CCManager defaultConfiguration] addEngine:HTTPBasicEngine withKey:@"HTTPBasicEngine"];
     [HTTPBasicEngine release];
   }	
 
   - (void)applicationDidFinishLaunching:(UIApplication *)application {
-  	[self setUpCloudKit];
+  	[self setUpCoreCloud];
   }
 
 Engines are used in the order you declared it for a request, and reversed order for responses. An engine is a simple class implementing the following protocol: 
 
-  @protocol CKEngine
+  @protocol CCEngine
 
   @required
   - (void)processRequest:(NSMutableURLRequest **)request withParams:(NSDictionary *)params;
@@ -65,12 +65,12 @@ Engines are used in the order you declared it for a request, and reversed order 
 
   @end
 
-Once you've configured CloudKit, your interlocutor will be CKCloudKitManager:
+Once you've configured CoreCloud, your interlocutor will be CCManager:
 
   - (void)loadUsers:(id)sender {
     NSMutableURLRequest *request;
     request= [NSMutableURLRequest requestWithURL:[NSURL URLWithString:@"user#index"]];
-    [[CKCloudKitManager defaultConfiguration] sendRequest:request withParams:nil andDelegate:self];
+    [[CCManager defaultConfiguration] sendRequest:request withParams:nil andDelegate:self];
   }
 
   - (void)request:(NSMutableURLRequest *)request didSucceedWithData:(id)data {

@@ -6,15 +6,15 @@
 //  Copyright 2010 Scrumers. All rights reserved.
 //
 
-#import "CKHTTPBasicAuthenticationEngine.h"
+#import "CCHTTPBasicAuthenticationEngine.h"
 
-#import "NSData+CloudKitAdditions.h"
+#import "NSData+CoreCloudAdditions.h"
 
-@interface CKHTTPBasicAuthenticationEngine (Private)
+@interface CCHTTPBasicAuthenticationEngine (Private)
 
 @end
 
-@implementation CKHTTPBasicAuthenticationEngine
+@implementation CCHTTPBasicAuthenticationEngine
 
 @synthesize
 username= _username,

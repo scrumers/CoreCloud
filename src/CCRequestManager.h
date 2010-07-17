@@ -1,5 +1,5 @@
 //
-//  CKRequestManager.h
+//  CCRequestManager.h
 //  Scrumers
 //
 //  Created by Ludovic Galabru on 27/07/09.
@@ -8,15 +8,15 @@
 
 #import <Foundation/Foundation.h>
 
-@class CKRequestOperation;
+@class CCRequestOperation;
 
-@interface CKRequestManager : NSObject {
+@interface CCRequestManager : NSObject {
 	NSOperationQueue * operationQueue;
 }
 
 + (id)sharedManager;
 
-- (void)processRequestOperation:(CKRequestOperation *)operation;
+- (void)processRequestOperation:(CCRequestOperation *)operation;
 - (void)cancelAllRequestOperations;
 
 @end

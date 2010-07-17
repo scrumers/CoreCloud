@@ -7,36 +7,36 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		4305391C11A535C8003C39C8 /* NSMutableArray+CloudKitAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = 4305391A11A535C8003C39C8 /* NSMutableArray+CloudKitAdditions.h */; };
-		4305391D11A535C8003C39C8 /* NSMutableArray+CloudKitAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 4305391B11A535C8003C39C8 /* NSMutableArray+CloudKitAdditions.m */; };
-		4317EFED1181DB510045FF78 /* CloudKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 4317EFEC1181DB510045FF78 /* CloudKit.h */; };
-		4317F0041181DB850045FF78 /* CKCloudKitManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 4317EFEF1181DB850045FF78 /* CKCloudKitManager.h */; };
-		4317F0051181DB850045FF78 /* CKHTTPBasicAuthenticationEngine.h in Headers */ = {isa = PBXBuildFile; fileRef = 4317EFF01181DB850045FF78 /* CKHTTPBasicAuthenticationEngine.h */; };
-		4317F0071181DB850045FF78 /* CKJSONEngine.h in Headers */ = {isa = PBXBuildFile; fileRef = 4317EFF21181DB850045FF78 /* CKJSONEngine.h */; };
-		4317F0081181DB850045FF78 /* CKOAuthEngine.h in Headers */ = {isa = PBXBuildFile; fileRef = 4317EFF31181DB850045FF78 /* CKOAuthEngine.h */; };
-		4317F0091181DB850045FF78 /* CKRequestManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 4317EFF41181DB850045FF78 /* CKRequestManager.h */; };
-		4317F00A1181DB850045FF78 /* CKRequestOperation.h in Headers */ = {isa = PBXBuildFile; fileRef = 4317EFF51181DB850045FF78 /* CKRequestOperation.h */; };
-		4317F00B1181DB850045FF78 /* CKRoutesEngine.h in Headers */ = {isa = PBXBuildFile; fileRef = 4317EFF61181DB850045FF78 /* CKRoutesEngine.h */; };
-		4317F00D1181DB850045FF78 /* NSData+CloudKitAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = 4317EFF81181DB850045FF78 /* NSData+CloudKitAdditions.h */; };
+		430226CE11F1A99D00606CDB /* CoreCloud.h in Headers */ = {isa = PBXBuildFile; fileRef = 430226CD11F1A99D00606CDB /* CoreCloud.h */; };
+		430226D511F1A9BA00606CDB /* CCManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 430226CF11F1A9BA00606CDB /* CCManager.h */; };
+		430226D611F1A9BA00606CDB /* CCManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 430226D011F1A9BA00606CDB /* CCManager.m */; };
+		430226D711F1A9BA00606CDB /* CCRequestManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 430226D111F1A9BA00606CDB /* CCRequestManager.h */; };
+		430226D811F1A9BA00606CDB /* CCRequestManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 430226D211F1A9BA00606CDB /* CCRequestManager.m */; };
+		430226D911F1A9BA00606CDB /* CCRequestOperation.h in Headers */ = {isa = PBXBuildFile; fileRef = 430226D311F1A9BA00606CDB /* CCRequestOperation.h */; };
+		430226DA11F1A9BA00606CDB /* CCRequestOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 430226D411F1A9BA00606CDB /* CCRequestOperation.m */; };
+		430226E111F1AA0E00606CDB /* NSData+CoreCloudAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = 430226DB11F1AA0E00606CDB /* NSData+CoreCloudAdditions.h */; };
+		430226E211F1AA0E00606CDB /* NSData+CoreCloudAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 430226DC11F1AA0E00606CDB /* NSData+CoreCloudAdditions.m */; };
+		430226E311F1AA0E00606CDB /* NSDictionary+CoreCloudAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = 430226DD11F1AA0E00606CDB /* NSDictionary+CoreCloudAdditions.h */; };
+		430226E411F1AA0E00606CDB /* NSDictionary+CoreCloudAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 430226DE11F1AA0E00606CDB /* NSDictionary+CoreCloudAdditions.m */; };
+		430226E511F1AA0E00606CDB /* NSMutableArray+CoreCloudAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = 430226DF11F1AA0E00606CDB /* NSMutableArray+CoreCloudAdditions.h */; };
+		430226E611F1AA0E00606CDB /* NSMutableArray+CoreCloudAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 430226E011F1AA0E00606CDB /* NSMutableArray+CoreCloudAdditions.m */; };
+		430226E911F1AA2400606CDB /* CCDictionarizerEngine.h in Headers */ = {isa = PBXBuildFile; fileRef = 430226E711F1AA2400606CDB /* CCDictionarizerEngine.h */; };
+		430226EA11F1AA2400606CDB /* CCDictionarizerEngine.m in Sources */ = {isa = PBXBuildFile; fileRef = 430226E811F1AA2400606CDB /* CCDictionarizerEngine.m */; };
+		430226ED11F1AA3C00606CDB /* CCRoutesEngine.h in Headers */ = {isa = PBXBuildFile; fileRef = 430226EB11F1AA3C00606CDB /* CCRoutesEngine.h */; };
+		430226EE11F1AA3C00606CDB /* CCRoutesEngine.m in Sources */ = {isa = PBXBuildFile; fileRef = 430226EC11F1AA3C00606CDB /* CCRoutesEngine.m */; };
+		430226F111F1AA4D00606CDB /* CCJSONEngine.h in Headers */ = {isa = PBXBuildFile; fileRef = 430226EF11F1AA4D00606CDB /* CCJSONEngine.h */; };
+		430226F211F1AA4D00606CDB /* CCJSONEngine.m in Sources */ = {isa = PBXBuildFile; fileRef = 430226F011F1AA4D00606CDB /* CCJSONEngine.m */; };
+		430226F511F1AA6900606CDB /* CCOAuthEngine.h in Headers */ = {isa = PBXBuildFile; fileRef = 430226F311F1AA6900606CDB /* CCOAuthEngine.h */; };
+		430226F611F1AA6900606CDB /* CCOAuthEngine.m in Sources */ = {isa = PBXBuildFile; fileRef = 430226F411F1AA6900606CDB /* CCOAuthEngine.m */; };
+		430226F911F1AA7600606CDB /* CCHTTPBasicAuthenticationEngine.h in Headers */ = {isa = PBXBuildFile; fileRef = 430226F711F1AA7600606CDB /* CCHTTPBasicAuthenticationEngine.h */; };
+		430226FA11F1AA7600606CDB /* CCHTTPBasicAuthenticationEngine.m in Sources */ = {isa = PBXBuildFile; fileRef = 430226F811F1AA7600606CDB /* CCHTTPBasicAuthenticationEngine.m */; };
+		430226FC11F1AA8000606CDB /* CCEngine.h in Headers */ = {isa = PBXBuildFile; fileRef = 430226FB11F1AA8000606CDB /* CCEngine.h */; };
+		430226FE11F1AA9500606CDB /* CCRequestDelegate.h in Headers */ = {isa = PBXBuildFile; fileRef = 430226FD11F1AA9500606CDB /* CCRequestDelegate.h */; };
 		4317F00E1181DB850045FF78 /* NSString+InflectionSupport.h in Headers */ = {isa = PBXBuildFile; fileRef = 4317EFF91181DB850045FF78 /* NSString+InflectionSupport.h */; };
-		4317F00F1181DB850045FF78 /* CKCloudKitManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 4317EFFA1181DB850045FF78 /* CKCloudKitManager.m */; };
-		4317F0101181DB850045FF78 /* CKHTTPBasicAuthenticationEngine.m in Sources */ = {isa = PBXBuildFile; fileRef = 4317EFFB1181DB850045FF78 /* CKHTTPBasicAuthenticationEngine.m */; };
-		4317F0111181DB850045FF78 /* CKJSONEngine.m in Sources */ = {isa = PBXBuildFile; fileRef = 4317EFFC1181DB850045FF78 /* CKJSONEngine.m */; };
-		4317F0121181DB850045FF78 /* CKOAuthEngine.m in Sources */ = {isa = PBXBuildFile; fileRef = 4317EFFD1181DB850045FF78 /* CKOAuthEngine.m */; };
-		4317F0131181DB850045FF78 /* CKRequestManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 4317EFFE1181DB850045FF78 /* CKRequestManager.m */; };
-		4317F0141181DB850045FF78 /* CKRequestOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 4317EFFF1181DB850045FF78 /* CKRequestOperation.m */; };
-		4317F0151181DB850045FF78 /* CKRoutesEngine.m in Sources */ = {isa = PBXBuildFile; fileRef = 4317F0001181DB850045FF78 /* CKRoutesEngine.m */; };
-		4317F0161181DB850045FF78 /* NSData+CloudKitAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 4317F0011181DB850045FF78 /* NSData+CloudKitAdditions.m */; };
 		4317F0171181DB850045FF78 /* NSString+InflectionSupport.m in Sources */ = {isa = PBXBuildFile; fileRef = 4317F0021181DB850045FF78 /* NSString+InflectionSupport.m */; };
-		431C7F5E11A41D93004F2B13 /* NSDictionary+CloudKitAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = 431C7F5C11A41D93004F2B13 /* NSDictionary+CloudKitAdditions.h */; };
-		431C7F5F11A41D93004F2B13 /* NSDictionary+CloudKitAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 431C7F5D11A41D93004F2B13 /* NSDictionary+CloudKitAdditions.m */; };
 		4322F74311EB3E4F00A9CEF0 /* libTouchJSON.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 431C7D7611A402FA004F2B13 /* libTouchJSON.a */; };
-		435A08CE1191C14A00030F4C /* CKEngine.h in Headers */ = {isa = PBXBuildFile; fileRef = 435A08CD1191C14A00030F4C /* CKEngine.h */; };
 		4377A26E11EB3EDE00D1909C /* libOAuthConsumer.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4317F0F11181E0C70045FF78 /* libOAuthConsumer.a */; };
-		4378EF7A1181D6AA004697B8 /* CloudKit_Prefix.pch in Headers */ = {isa = PBXBuildFile; fileRef = 4378EF791181D6AA004697B8 /* CloudKit_Prefix.pch */; };
-		438E39B911A5834F0028F47F /* CKDictionarizerEngine.h in Headers */ = {isa = PBXBuildFile; fileRef = 438E39B711A5834F0028F47F /* CKDictionarizerEngine.h */; };
-		438E39BA11A5834F0028F47F /* CKDictionarizerEngine.m in Sources */ = {isa = PBXBuildFile; fileRef = 438E39B811A5834F0028F47F /* CKDictionarizerEngine.m */; };
-		438E3A6B11A595740028F47F /* CKRequestDelegate.h in Headers */ = {isa = PBXBuildFile; fileRef = 438E3A6A11A595740028F47F /* CKRequestDelegate.h */; };
+		4378EF7A1181D6AA004697B8 /* CoreCloud_Prefix.pch in Headers */ = {isa = PBXBuildFile; fileRef = 4378EF791181D6AA004697B8 /* CoreCloud_Prefix.pch */; };
 		AACBBE4A0F95108600F1A2B1 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AACBBE490F95108600F1A2B1 /* Foundation.framework */; };
 /* End PBXBuildFile section */
 
@@ -79,40 +79,40 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		4305391A11A535C8003C39C8 /* NSMutableArray+CloudKitAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSMutableArray+CloudKitAdditions.h"; path = "../../src/NSMutableArray+CloudKitAdditions.h"; sourceTree = "<group>"; };
-		4305391B11A535C8003C39C8 /* NSMutableArray+CloudKitAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSMutableArray+CloudKitAdditions.m"; path = "../../src/NSMutableArray+CloudKitAdditions.m"; sourceTree = "<group>"; };
+		430226CD11F1A99D00606CDB /* CoreCloud.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CoreCloud.h; path = ../../src/CoreCloud/CoreCloud.h; sourceTree = SOURCE_ROOT; };
+		430226CF11F1A9BA00606CDB /* CCManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CCManager.h; path = ../../src/CCManager.h; sourceTree = SOURCE_ROOT; };
+		430226D011F1A9BA00606CDB /* CCManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CCManager.m; path = ../../src/CCManager.m; sourceTree = SOURCE_ROOT; };
+		430226D111F1A9BA00606CDB /* CCRequestManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CCRequestManager.h; path = ../../src/CCRequestManager.h; sourceTree = SOURCE_ROOT; };
+		430226D211F1A9BA00606CDB /* CCRequestManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CCRequestManager.m; path = ../../src/CCRequestManager.m; sourceTree = SOURCE_ROOT; };
+		430226D311F1A9BA00606CDB /* CCRequestOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CCRequestOperation.h; path = ../../src/CCRequestOperation.h; sourceTree = SOURCE_ROOT; };
+		430226D411F1A9BA00606CDB /* CCRequestOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CCRequestOperation.m; path = ../../src/CCRequestOperation.m; sourceTree = SOURCE_ROOT; };
+		430226DB11F1AA0E00606CDB /* NSData+CoreCloudAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSData+CoreCloudAdditions.h"; path = "../../src/NSData+CoreCloudAdditions.h"; sourceTree = SOURCE_ROOT; };
+		430226DC11F1AA0E00606CDB /* NSData+CoreCloudAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSData+CoreCloudAdditions.m"; path = "../../src/NSData+CoreCloudAdditions.m"; sourceTree = SOURCE_ROOT; };
+		430226DD11F1AA0E00606CDB /* NSDictionary+CoreCloudAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSDictionary+CoreCloudAdditions.h"; path = "../../src/NSDictionary+CoreCloudAdditions.h"; sourceTree = SOURCE_ROOT; };
+		430226DE11F1AA0E00606CDB /* NSDictionary+CoreCloudAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSDictionary+CoreCloudAdditions.m"; path = "../../src/NSDictionary+CoreCloudAdditions.m"; sourceTree = SOURCE_ROOT; };
+		430226DF11F1AA0E00606CDB /* NSMutableArray+CoreCloudAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSMutableArray+CoreCloudAdditions.h"; path = "../../src/NSMutableArray+CoreCloudAdditions.h"; sourceTree = SOURCE_ROOT; };
+		430226E011F1AA0E00606CDB /* NSMutableArray+CoreCloudAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSMutableArray+CoreCloudAdditions.m"; path = "../../src/NSMutableArray+CoreCloudAdditions.m"; sourceTree = SOURCE_ROOT; };
+		430226E711F1AA2400606CDB /* CCDictionarizerEngine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CCDictionarizerEngine.h; path = ../../src/CCDictionarizerEngine.h; sourceTree = SOURCE_ROOT; };
+		430226E811F1AA2400606CDB /* CCDictionarizerEngine.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CCDictionarizerEngine.m; path = ../../src/CCDictionarizerEngine.m; sourceTree = SOURCE_ROOT; };
+		430226EB11F1AA3C00606CDB /* CCRoutesEngine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CCRoutesEngine.h; path = ../../src/CCRoutesEngine.h; sourceTree = SOURCE_ROOT; };
+		430226EC11F1AA3C00606CDB /* CCRoutesEngine.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CCRoutesEngine.m; path = ../../src/CCRoutesEngine.m; sourceTree = SOURCE_ROOT; };
+		430226EF11F1AA4D00606CDB /* CCJSONEngine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CCJSONEngine.h; path = ../../src/CCJSONEngine.h; sourceTree = SOURCE_ROOT; };
+		430226F011F1AA4D00606CDB /* CCJSONEngine.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CCJSONEngine.m; path = ../../src/CCJSONEngine.m; sourceTree = SOURCE_ROOT; };
+		430226F311F1AA6900606CDB /* CCOAuthEngine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CCOAuthEngine.h; path = ../../src/CCOAuthEngine.h; sourceTree = SOURCE_ROOT; };
+		430226F411F1AA6900606CDB /* CCOAuthEngine.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CCOAuthEngine.m; path = ../../src/CCOAuthEngine.m; sourceTree = SOURCE_ROOT; };
+		430226F711F1AA7600606CDB /* CCHTTPBasicAuthenticationEngine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CCHTTPBasicAuthenticationEngine.h; path = ../../src/CCHTTPBasicAuthenticationEngine.h; sourceTree = SOURCE_ROOT; };
+		430226F811F1AA7600606CDB /* CCHTTPBasicAuthenticationEngine.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CCHTTPBasicAuthenticationEngine.m; path = ../../src/CCHTTPBasicAuthenticationEngine.m; sourceTree = SOURCE_ROOT; };
+		430226FB11F1AA8000606CDB /* CCEngine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CCEngine.h; path = ../../src/CCEngine.h; sourceTree = SOURCE_ROOT; };
+		430226FD11F1AA9500606CDB /* CCRequestDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CCRequestDelegate.h; path = ../../src/CCRequestDelegate.h; sourceTree = SOURCE_ROOT; };
 		43053A1111A55398003C39C8 /* HTTPStatus.strings */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; name = HTTPStatus.strings; path = ../../src/HTTPStatus.strings; sourceTree = "<group>"; };
-		4317EFEC1181DB510045FF78 /* CloudKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CloudKit.h; path = ../../src/CloudKit/CloudKit.h; sourceTree = SOURCE_ROOT; };
-		4317EFEF1181DB850045FF78 /* CKCloudKitManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CKCloudKitManager.h; path = ../../src/CKCloudKitManager.h; sourceTree = SOURCE_ROOT; };
-		4317EFF01181DB850045FF78 /* CKHTTPBasicAuthenticationEngine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CKHTTPBasicAuthenticationEngine.h; path = ../../src/CKHTTPBasicAuthenticationEngine.h; sourceTree = SOURCE_ROOT; };
-		4317EFF21181DB850045FF78 /* CKJSONEngine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CKJSONEngine.h; path = ../../src/CKJSONEngine.h; sourceTree = SOURCE_ROOT; };
-		4317EFF31181DB850045FF78 /* CKOAuthEngine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CKOAuthEngine.h; path = ../../src/CKOAuthEngine.h; sourceTree = SOURCE_ROOT; };
-		4317EFF41181DB850045FF78 /* CKRequestManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CKRequestManager.h; path = ../../src/CKRequestManager.h; sourceTree = SOURCE_ROOT; };
-		4317EFF51181DB850045FF78 /* CKRequestOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CKRequestOperation.h; path = ../../src/CKRequestOperation.h; sourceTree = SOURCE_ROOT; };
-		4317EFF61181DB850045FF78 /* CKRoutesEngine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CKRoutesEngine.h; path = ../../src/CKRoutesEngine.h; sourceTree = SOURCE_ROOT; };
-		4317EFF81181DB850045FF78 /* NSData+CloudKitAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSData+CloudKitAdditions.h"; path = "../../src/NSData+CloudKitAdditions.h"; sourceTree = SOURCE_ROOT; };
 		4317EFF91181DB850045FF78 /* NSString+InflectionSupport.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSString+InflectionSupport.h"; path = "../../src/NSString+InflectionSupport.h"; sourceTree = SOURCE_ROOT; };
-		4317EFFA1181DB850045FF78 /* CKCloudKitManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CKCloudKitManager.m; path = ../../src/CKCloudKitManager.m; sourceTree = SOURCE_ROOT; };
-		4317EFFB1181DB850045FF78 /* CKHTTPBasicAuthenticationEngine.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CKHTTPBasicAuthenticationEngine.m; path = ../../src/CKHTTPBasicAuthenticationEngine.m; sourceTree = SOURCE_ROOT; };
-		4317EFFC1181DB850045FF78 /* CKJSONEngine.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CKJSONEngine.m; path = ../../src/CKJSONEngine.m; sourceTree = SOURCE_ROOT; };
-		4317EFFD1181DB850045FF78 /* CKOAuthEngine.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CKOAuthEngine.m; path = ../../src/CKOAuthEngine.m; sourceTree = SOURCE_ROOT; };
-		4317EFFE1181DB850045FF78 /* CKRequestManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CKRequestManager.m; path = ../../src/CKRequestManager.m; sourceTree = SOURCE_ROOT; };
-		4317EFFF1181DB850045FF78 /* CKRequestOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CKRequestOperation.m; path = ../../src/CKRequestOperation.m; sourceTree = SOURCE_ROOT; };
-		4317F0001181DB850045FF78 /* CKRoutesEngine.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CKRoutesEngine.m; path = ../../src/CKRoutesEngine.m; sourceTree = SOURCE_ROOT; };
-		4317F0011181DB850045FF78 /* NSData+CloudKitAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSData+CloudKitAdditions.m"; path = "../../src/NSData+CloudKitAdditions.m"; sourceTree = SOURCE_ROOT; };
 		4317F0021181DB850045FF78 /* NSString+InflectionSupport.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSString+InflectionSupport.m"; path = "../../src/NSString+InflectionSupport.m"; sourceTree = SOURCE_ROOT; };
 		431C7D6E11A402FA004F2B13 /* TouchJSON.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = TouchJSON.xcodeproj; path = "../../lib/touchjson-objc/src/TouchJSON.xcodeproj"; sourceTree = SOURCE_ROOT; };
-		431C7F5C11A41D93004F2B13 /* NSDictionary+CloudKitAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSDictionary+CloudKitAdditions.h"; path = "../../src/NSDictionary+CloudKitAdditions.h"; sourceTree = "<group>"; };
-		431C7F5D11A41D93004F2B13 /* NSDictionary+CloudKitAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSDictionary+CloudKitAdditions.m"; path = "../../src/NSDictionary+CloudKitAdditions.m"; sourceTree = "<group>"; };
-		435A08CD1191C14A00030F4C /* CKEngine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CKEngine.h; path = ../../src/CKEngine.h; sourceTree = "<group>"; };
-		4378EF791181D6AA004697B8 /* CloudKit_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CloudKit_Prefix.pch; sourceTree = "<group>"; };
-		438E39B711A5834F0028F47F /* CKDictionarizerEngine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CKDictionarizerEngine.h; path = ../../src/CKDictionarizerEngine.h; sourceTree = "<group>"; };
-		438E39B811A5834F0028F47F /* CKDictionarizerEngine.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CKDictionarizerEngine.m; path = ../../src/CKDictionarizerEngine.m; sourceTree = "<group>"; };
-		438E3A6A11A595740028F47F /* CKRequestDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CKRequestDelegate.h; path = ../../src/CKRequestDelegate.h; sourceTree = "<group>"; };
+		4378EF791181D6AA004697B8 /* CoreCloud_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CoreCloud_Prefix.pch; sourceTree = "<group>"; };
 		43A20D3C116DC1D700BA930A /* OAuthConsumer.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = OAuthConsumer.xcodeproj; path = "../../lib/oauth-objc/platform/iPhone/OAuthConsumer.xcodeproj"; sourceTree = SOURCE_ROOT; };
 		43A20FE9116DDC3800BA930A /* FBConnect.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = FBConnect.xcodeproj; path = "../../lib/fbconnect-objc/platform/iPhone/FBConnect.xcodeproj"; sourceTree = SOURCE_ROOT; };
 		AACBBE490F95108600F1A2B1 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
-		D2AAC07E0554694100DB518D /* libCloudKit.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libCloudKit.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		D2AAC07E0554694100DB518D /* libCoreCloud.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libCoreCloud.a; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -132,7 +132,7 @@
 		034768DFFF38A50411DB9C8B /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				D2AAC07E0554694100DB518D /* libCloudKit.a */,
+				D2AAC07E0554694100DB518D /* libCoreCloud.a */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -140,7 +140,7 @@
 		0867D691FE84028FC02AAC07 /* CloudKit */ = {
 			isa = PBXGroup;
 			children = (
-				4317EFEC1181DB510045FF78 /* CloudKit.h */,
+				430226CD11F1A99D00606CDB /* CoreCloud.h */,
 				08FB77AEFE84172EC02AAC07 /* Classes */,
 				32C88DFF0371C24200C91783 /* Other Sources */,
 				0867D69AFE84028FC02AAC07 /* Frameworks */,
@@ -165,7 +165,7 @@
 				43A20CF0116DC0DA00BA930A /* Utils */,
 				43A20CE0116DC0DA00BA930A /* Engines */,
 				435A08CC1191C13000030F4C /* Route engines */,
-				438E3A6A11A595740028F47F /* CKRequestDelegate.h */,
+				430226FD11F1AA9500606CDB /* CCRequestDelegate.h */,
 			);
 			name = Classes;
 			sourceTree = "<group>";
@@ -173,7 +173,7 @@
 		32C88DFF0371C24200C91783 /* Other Sources */ = {
 			isa = PBXGroup;
 			children = (
-				4378EF791181D6AA004697B8 /* CloudKit_Prefix.pch */,
+				4378EF791181D6AA004697B8 /* CoreCloud_Prefix.pch */,
 			);
 			name = "Other Sources";
 			sourceTree = "<group>";
@@ -181,12 +181,12 @@
 		43053A2811A55962003C39C8 /* Core */ = {
 			isa = PBXGroup;
 			children = (
-				4317EFEF1181DB850045FF78 /* CKCloudKitManager.h */,
-				4317EFFA1181DB850045FF78 /* CKCloudKitManager.m */,
-				4317EFF41181DB850045FF78 /* CKRequestManager.h */,
-				4317EFFE1181DB850045FF78 /* CKRequestManager.m */,
-				4317EFF51181DB850045FF78 /* CKRequestOperation.h */,
-				4317EFFF1181DB850045FF78 /* CKRequestOperation.m */,
+				430226CF11F1A9BA00606CDB /* CCManager.h */,
+				430226D011F1A9BA00606CDB /* CCManager.m */,
+				430226D111F1A9BA00606CDB /* CCRequestManager.h */,
+				430226D211F1A9BA00606CDB /* CCRequestManager.m */,
+				430226D311F1A9BA00606CDB /* CCRequestOperation.h */,
+				430226D411F1A9BA00606CDB /* CCRequestOperation.m */,
 			);
 			name = Core;
 			sourceTree = "<group>";
@@ -218,7 +218,7 @@
 		435A08CC1191C13000030F4C /* Route engines */ = {
 			isa = PBXGroup;
 			children = (
-				435A08CD1191C14A00030F4C /* CKEngine.h */,
+				430226FB11F1AA8000606CDB /* CCEngine.h */,
 			);
 			name = "Route engines";
 			sourceTree = "<group>";
@@ -226,8 +226,8 @@
 		438E39B611A5831B0028F47F /* Dictionarizer */ = {
 			isa = PBXGroup;
 			children = (
-				438E39B711A5834F0028F47F /* CKDictionarizerEngine.h */,
-				438E39B811A5834F0028F47F /* CKDictionarizerEngine.m */,
+				430226E711F1AA2400606CDB /* CCDictionarizerEngine.h */,
+				430226E811F1AA2400606CDB /* CCDictionarizerEngine.m */,
 			);
 			name = Dictionarizer;
 			sourceTree = "<group>";
@@ -249,8 +249,8 @@
 		43A20CE2116DC0DA00BA930A /* HTTP Basic */ = {
 			isa = PBXGroup;
 			children = (
-				4317EFF01181DB850045FF78 /* CKHTTPBasicAuthenticationEngine.h */,
-				4317EFFB1181DB850045FF78 /* CKHTTPBasicAuthenticationEngine.m */,
+				430226F711F1AA7600606CDB /* CCHTTPBasicAuthenticationEngine.h */,
+				430226F811F1AA7600606CDB /* CCHTTPBasicAuthenticationEngine.m */,
 			);
 			name = "HTTP Basic";
 			sourceTree = "<group>";
@@ -258,8 +258,8 @@
 		43A20CE5116DC0DA00BA930A /* OAuth */ = {
 			isa = PBXGroup;
 			children = (
-				4317EFF31181DB850045FF78 /* CKOAuthEngine.h */,
-				4317EFFD1181DB850045FF78 /* CKOAuthEngine.m */,
+				430226F311F1AA6900606CDB /* CCOAuthEngine.h */,
+				430226F411F1AA6900606CDB /* CCOAuthEngine.m */,
 				43A21086116DEB2B00BA930A /* Library */,
 			);
 			name = OAuth;
@@ -284,14 +284,14 @@
 		43A20CF1116DC0DA00BA930A /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
-				4317EFF81181DB850045FF78 /* NSData+CloudKitAdditions.h */,
-				4317F0011181DB850045FF78 /* NSData+CloudKitAdditions.m */,
+				430226DB11F1AA0E00606CDB /* NSData+CoreCloudAdditions.h */,
+				430226DC11F1AA0E00606CDB /* NSData+CoreCloudAdditions.m */,
+				430226DD11F1AA0E00606CDB /* NSDictionary+CoreCloudAdditions.h */,
+				430226DE11F1AA0E00606CDB /* NSDictionary+CoreCloudAdditions.m */,
+				430226DF11F1AA0E00606CDB /* NSMutableArray+CoreCloudAdditions.h */,
+				430226E011F1AA0E00606CDB /* NSMutableArray+CoreCloudAdditions.m */,
 				4317EFF91181DB850045FF78 /* NSString+InflectionSupport.h */,
 				4317F0021181DB850045FF78 /* NSString+InflectionSupport.m */,
-				431C7F5C11A41D93004F2B13 /* NSDictionary+CloudKitAdditions.h */,
-				431C7F5D11A41D93004F2B13 /* NSDictionary+CloudKitAdditions.m */,
-				4305391A11A535C8003C39C8 /* NSMutableArray+CloudKitAdditions.h */,
-				4305391B11A535C8003C39C8 /* NSMutableArray+CloudKitAdditions.m */,
 			);
 			name = Extensions;
 			sourceTree = "<group>";
@@ -299,8 +299,8 @@
 		43A20DA1116DC5A400BA930A /* JSON */ = {
 			isa = PBXGroup;
 			children = (
-				4317EFF21181DB850045FF78 /* CKJSONEngine.h */,
-				4317EFFC1181DB850045FF78 /* CKJSONEngine.m */,
+				430226EF11F1AA4D00606CDB /* CCJSONEngine.h */,
+				430226F011F1AA4D00606CDB /* CCJSONEngine.m */,
 				43A2108A116DEB3900BA930A /* Library */,
 			);
 			name = JSON;
@@ -316,8 +316,8 @@
 		43A20FD4116DD8F900BA930A /* Routes */ = {
 			isa = PBXGroup;
 			children = (
-				4317EFF61181DB850045FF78 /* CKRoutesEngine.h */,
-				4317F0001181DB850045FF78 /* CKRoutesEngine.m */,
+				430226EB11F1AA3C00606CDB /* CCRoutesEngine.h */,
+				430226EC11F1AA3C00606CDB /* CCRoutesEngine.m */,
 			);
 			name = Routes;
 			sourceTree = "<group>";
@@ -353,31 +353,31 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4378EF7A1181D6AA004697B8 /* CloudKit_Prefix.pch in Headers */,
-				4317EFED1181DB510045FF78 /* CloudKit.h in Headers */,
-				4317F0041181DB850045FF78 /* CKCloudKitManager.h in Headers */,
-				4317F0051181DB850045FF78 /* CKHTTPBasicAuthenticationEngine.h in Headers */,
-				4317F0071181DB850045FF78 /* CKJSONEngine.h in Headers */,
-				4317F0081181DB850045FF78 /* CKOAuthEngine.h in Headers */,
-				4317F0091181DB850045FF78 /* CKRequestManager.h in Headers */,
-				4317F00A1181DB850045FF78 /* CKRequestOperation.h in Headers */,
-				4317F00B1181DB850045FF78 /* CKRoutesEngine.h in Headers */,
-				4317F00D1181DB850045FF78 /* NSData+CloudKitAdditions.h in Headers */,
+				4378EF7A1181D6AA004697B8 /* CoreCloud_Prefix.pch in Headers */,
 				4317F00E1181DB850045FF78 /* NSString+InflectionSupport.h in Headers */,
-				435A08CE1191C14A00030F4C /* CKEngine.h in Headers */,
-				431C7F5E11A41D93004F2B13 /* NSDictionary+CloudKitAdditions.h in Headers */,
-				4305391C11A535C8003C39C8 /* NSMutableArray+CloudKitAdditions.h in Headers */,
-				438E39B911A5834F0028F47F /* CKDictionarizerEngine.h in Headers */,
-				438E3A6B11A595740028F47F /* CKRequestDelegate.h in Headers */,
+				430226CE11F1A99D00606CDB /* CoreCloud.h in Headers */,
+				430226D511F1A9BA00606CDB /* CCManager.h in Headers */,
+				430226D711F1A9BA00606CDB /* CCRequestManager.h in Headers */,
+				430226D911F1A9BA00606CDB /* CCRequestOperation.h in Headers */,
+				430226E111F1AA0E00606CDB /* NSData+CoreCloudAdditions.h in Headers */,
+				430226E311F1AA0E00606CDB /* NSDictionary+CoreCloudAdditions.h in Headers */,
+				430226E511F1AA0E00606CDB /* NSMutableArray+CoreCloudAdditions.h in Headers */,
+				430226E911F1AA2400606CDB /* CCDictionarizerEngine.h in Headers */,
+				430226ED11F1AA3C00606CDB /* CCRoutesEngine.h in Headers */,
+				430226F111F1AA4D00606CDB /* CCJSONEngine.h in Headers */,
+				430226F511F1AA6900606CDB /* CCOAuthEngine.h in Headers */,
+				430226F911F1AA7600606CDB /* CCHTTPBasicAuthenticationEngine.h in Headers */,
+				430226FC11F1AA8000606CDB /* CCEngine.h in Headers */,
+				430226FE11F1AA9500606CDB /* CCRequestDelegate.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		D2AAC07D0554694100DB518D /* CloudKit */ = {
+		D2AAC07D0554694100DB518D /* CoreCloud */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 1DEB921E08733DC00010E9CD /* Build configuration list for PBXNativeTarget "CloudKit" */;
+			buildConfigurationList = 1DEB921E08733DC00010E9CD /* Build configuration list for PBXNativeTarget "CoreCloud" */;
 			buildPhases = (
 				D2AAC07A0554694100DB518D /* Headers */,
 				D2AAC07B0554694100DB518D /* Sources */,
@@ -389,9 +389,9 @@
 				4322F73E11EB3E4600A9CEF0 /* PBXTargetDependency */,
 				4377A27011EB3EEA00D1909C /* PBXTargetDependency */,
 			);
-			name = CloudKit;
+			name = CoreCloud;
 			productName = CloudKit;
-			productReference = D2AAC07E0554694100DB518D /* libCloudKit.a */;
+			productReference = D2AAC07E0554694100DB518D /* libCoreCloud.a */;
 			productType = "com.apple.product-type.library.static";
 		};
 /* End PBXNativeTarget section */
@@ -400,9 +400,9 @@
 		0867D690FE84028FC02AAC07 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				ORGANIZATIONNAME = scrumers;
+				ORGANIZATIONNAME = Scrumers;
 			};
-			buildConfigurationList = 1DEB922208733DC00010E9CD /* Build configuration list for PBXProject "CloudKit" */;
+			buildConfigurationList = 1DEB922208733DC00010E9CD /* Build configuration list for PBXProject "CoreCloud" */;
 			compatibilityVersion = "Xcode 3.1";
 			hasScannedForEncodings = 1;
 			mainGroup = 0867D691FE84028FC02AAC07 /* CloudKit */;
@@ -424,7 +424,7 @@
 			);
 			projectRoot = "";
 			targets = (
-				D2AAC07D0554694100DB518D /* CloudKit */,
+				D2AAC07D0554694100DB518D /* CoreCloud */,
 			);
 		};
 /* End PBXProject section */
@@ -458,18 +458,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4317F00F1181DB850045FF78 /* CKCloudKitManager.m in Sources */,
-				4317F0101181DB850045FF78 /* CKHTTPBasicAuthenticationEngine.m in Sources */,
-				4317F0111181DB850045FF78 /* CKJSONEngine.m in Sources */,
-				4317F0121181DB850045FF78 /* CKOAuthEngine.m in Sources */,
-				4317F0131181DB850045FF78 /* CKRequestManager.m in Sources */,
-				4317F0141181DB850045FF78 /* CKRequestOperation.m in Sources */,
-				4317F0151181DB850045FF78 /* CKRoutesEngine.m in Sources */,
-				4317F0161181DB850045FF78 /* NSData+CloudKitAdditions.m in Sources */,
 				4317F0171181DB850045FF78 /* NSString+InflectionSupport.m in Sources */,
-				431C7F5F11A41D93004F2B13 /* NSDictionary+CloudKitAdditions.m in Sources */,
-				4305391D11A535C8003C39C8 /* NSMutableArray+CloudKitAdditions.m in Sources */,
-				438E39BA11A5834F0028F47F /* CKDictionarizerEngine.m in Sources */,
+				430226D611F1A9BA00606CDB /* CCManager.m in Sources */,
+				430226D811F1A9BA00606CDB /* CCRequestManager.m in Sources */,
+				430226DA11F1A9BA00606CDB /* CCRequestOperation.m in Sources */,
+				430226E211F1AA0E00606CDB /* NSData+CoreCloudAdditions.m in Sources */,
+				430226E411F1AA0E00606CDB /* NSDictionary+CoreCloudAdditions.m in Sources */,
+				430226E611F1AA0E00606CDB /* NSMutableArray+CoreCloudAdditions.m in Sources */,
+				430226EA11F1AA2400606CDB /* CCDictionarizerEngine.m in Sources */,
+				430226EE11F1AA3C00606CDB /* CCRoutesEngine.m in Sources */,
+				430226F211F1AA4D00606CDB /* CCJSONEngine.m in Sources */,
+				430226F611F1AA6900606CDB /* CCOAuthEngine.m in Sources */,
+				430226FA11F1AA7600606CDB /* CCHTTPBasicAuthenticationEngine.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -495,13 +495,13 @@
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ARCHS = armv6;
 				COPY_PHASE_STRIP = NO;
-				DSTROOT = /tmp/CloudKit.dst;
+				DSTROOT = /tmp/CoreCloud.dst;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_ENABLE_FIX_AND_CONTINUE = YES;
 				GCC_MODEL_TUNING = G5;
 				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = CloudKit_Prefix.pch;
+				GCC_PREFIX_HEADER = CoreCloud_Prefix.pch;
 				HEADER_SEARCH_PATHS = (
 					"../../lib/touchjson-objc/src//**",
 					"../../lib/oauth-objc/src//**",
@@ -518,7 +518,7 @@
 					"-all_load",
 					"-ObjC",
 				);
-				PRODUCT_NAME = CloudKit;
+				PRODUCT_NAME = CoreCloud;
 				VALID_ARCHS = armv6;
 			};
 			name = Debug;
@@ -528,10 +528,10 @@
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ARCHS = armv6;
-				DSTROOT = /tmp/CloudKit.dst;
+				DSTROOT = /tmp/CoreCloud.dst;
 				GCC_MODEL_TUNING = G5;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = CloudKit_Prefix.pch;
+				GCC_PREFIX_HEADER = CoreCloud_Prefix.pch;
 				HEADER_SEARCH_PATHS = (
 					"../../lib/touchjson-objc/src//**",
 					"../../lib/oauth-objc/src//**",
@@ -548,7 +548,7 @@
 					"-all_load",
 					"-ObjC",
 				);
-				PRODUCT_NAME = CloudKit;
+				PRODUCT_NAME = CoreCloud;
 				VALID_ARCHS = armv6;
 			};
 			name = Release;
@@ -587,7 +587,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		1DEB921E08733DC00010E9CD /* Build configuration list for PBXNativeTarget "CloudKit" */ = {
+		1DEB921E08733DC00010E9CD /* Build configuration list for PBXNativeTarget "CoreCloud" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				1DEB921F08733DC00010E9CD /* Debug */,
@@ -596,7 +596,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		1DEB922208733DC00010E9CD /* Build configuration list for PBXProject "CloudKit" */ = {
+		1DEB922208733DC00010E9CD /* Build configuration list for PBXProject "CoreCloud" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				1DEB922308733DC00010E9CD /* Debug */,

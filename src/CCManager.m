@@ -1,17 +1,17 @@
 //
-//  CKCloudKitManager.m
+//  CCManager.m
 //  Scrumers
 //
 //  Created by Ludovic Galabru on 25/07/09.
 //  Copyright 2009 Scrumers. All rights reserved.
 //
 
-#import "CKCloudKitManager.h"
-#import "CKRequestManager.h"
-#import "CKRequestOperation.h"
-#import "CKEngine.h"
+#import "CCManager.h"
+#import "CCRequestManager.h"
+#import "CCRequestOperation.h"
+#import "CCEngine.h"
 
-@implementation CKCloudKitManager
+@implementation CCManager
 
 @synthesize ordered_engines;
 
@@ -25,15 +25,15 @@
 	return self;
 }
 
-+ (CKCloudKitManager *)defaultConfiguration {
-	static CKCloudKitManager * defaultConfiguration = nil;
++ (CCManager *)defaultConfiguration {
+	static CCManager * defaultConfiguration = nil;
 	if (defaultConfiguration == nil) {
-		defaultConfiguration = [[CKCloudKitManager alloc] init];
+		defaultConfiguration = [[CCManager alloc] init];
 	}
 	return defaultConfiguration;
 }
 
-- (void)addEngine:(NSObject<CKEngine> *)engine withKey:(NSString *)key {
+- (void)addEngine:(NSObject<CCEngine> *)engine withKey:(NSString *)key {
 	[ordered_engines addObject:key];
 	[engines setObject:engine forKey:key];
 }
@@ -50,17 +50,17 @@
 	}
 }
 
-- (NSObject<CKEngine> *)engineForKey:(NSString *)key {
+- (NSObject<CCEngine> *)engineForKey:(NSString *)key {
 	return [engines objectForKey:key];
 }
 
 - (void)sendRequest:(NSMutableURLRequest *)request withParams:(NSDictionary *)params andDelegate:(id)delegate {
-	CKRequestOperation *requestOperation;
-	requestOperation= [CKRequestOperation operationWithRequest:request
+	CCRequestOperation *requestOperation;
+	requestOperation= [CCRequestOperation operationWithRequest:request
 																											params:params
 																										delegate:delegate 
 																						andConfiguration:self];
-	[[CKRequestManager sharedManager] processRequestOperation:requestOperation];
+	[[CCRequestManager sharedManager] processRequestOperation:requestOperation];
 }
 
 - (void)sendRequest:(NSMutableURLRequest *)request withParams:(NSDictionary *)params {

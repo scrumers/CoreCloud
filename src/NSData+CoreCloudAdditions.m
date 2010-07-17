@@ -1,14 +1,14 @@
 //
 //  NSData+ScrumersAdditions.m
-//  CloudKit
+//  CoreCloud
 //
 //  Created by Ludovic Galabru on 07/04/10.
 //  Copyright 2010 Scrumers. All rights reserved.
 //
 
-#import "NSData+CloudKitAdditions.h"
+#import "NSData+CoreCloudAdditions.h"
 
-@implementation NSData (CloudKit)
+@implementation NSData (CoreCloud)
 
 // From: http://www.cocoadev.com/index.pl?BaseSixtyFour
 

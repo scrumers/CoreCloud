@@ -1,16 +1,16 @@
 //
-//  CKRoutesEngine.m
-//  CloudKit
+//  CCRoutesEngine.m
+//  CoreCloud
 //
 //  Created by Ludovic Galabru on 08/04/10.
 //  Copyright 2010 Software Engineering Task Force. All rights reserved.
 //
 
-#import "CKRoutesEngine.h"
-#import "NSDictionary+CloudKitAdditions.h"
-#import "NSMutableArray+CloudKitAdditions.h"
+#import "CCRoutesEngine.h"
+#import "NSDictionary+CoreCloudAdditions.h"
+#import "NSMutableArray+CoreCloudAdditions.h"
 
-@interface CKRoutesEngine (Private)
+@interface CCRoutesEngine (Private)
 
 - (NSURL *)URLForKey:(NSString *)key;
 - (NSURL *)URLForKey:(NSString *)key withDictionary:(NSDictionary *)newConstants;
@@ -21,7 +21,7 @@
 
 @end
 
-@implementation CKRoutesEngine
+@implementation CCRoutesEngine
 
 - (id)init {
 	self = [super init];

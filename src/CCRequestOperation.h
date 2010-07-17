@@ -1,5 +1,5 @@
 //
-//  CKRequestOperation.h
+//  CCRequestOperation.h
 //  Scrumers
 //
 //  Created by Ludovic Galabru on 27/07/09.
@@ -8,14 +8,14 @@
 
 #import <Foundation/Foundation.h>
 
-@class CKCloudKitManager;
+@class CCManager;
 
-@protocol CKRequestDelegate;
+@protocol CCRequestDelegate;
 
-@interface CKRequestOperation : NSOperation {
+@interface CCRequestOperation : NSOperation {
 	NSMutableURLRequest * request;
-	NSObject<CKRequestDelegate> * delegate;
-	CKCloudKitManager *configuration;
+	NSObject<CCRequestDelegate> * delegate;
+	CCManager *configuration;
 	NSMutableDictionary *params;
 	NSData * data;
 }
@@ -23,11 +23,11 @@
 - (id)initWithRequest:(NSMutableURLRequest *)inRequest 
 							 params:(NSDictionary *)inParams 
 						 delegate:(id)inDelegate 
-		 andConfiguration:(CKCloudKitManager *)inConfiguration;
+		 andConfiguration:(CCManager *)inConfiguration;
 
 + (id)operationWithRequest:(NSMutableURLRequest *)inRequest 
 										params:(NSDictionary *)inParams 
 									delegate:(id)inDelegate 
-					andConfiguration:(CKCloudKitManager *)inConfiguration;
+					andConfiguration:(CCManager *)inConfiguration;
 
 @end

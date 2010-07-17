@@ -1,15 +1,15 @@
 //
-//  CKOAuthEngine.m
-//  CloudKit
+//  CCOAuthEngine.m
+//  CoreCloud
 //
 //  Created by Ludovic Galabru on 07/04/10.
 //  Copyright 2010 Scrumers. All rights reserved.
 //
 
-#import "CKOAuthEngine.h"
+#import "CCOAuthEngine.h"
 #import "OAuthConsumer/OAuthConsumer.h"
 
-@implementation CKOAuthEngine
+@implementation CCOAuthEngine
 
 @synthesize 
 token = _token;

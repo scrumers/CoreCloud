@@ -1,15 +1,15 @@
 //
-//  CKRequestManager.m
+//  CCRequestManager.m
 //  Scrumers
 //
 //  Created by Ludovic Galabru on 27/07/09.
 //  Copyright 2009 Scrumers. All rights reserved.
 //
 
-#import "CKRequestManager.h"
-#import "CKRequestOperation.h"
+#import "CCRequestManager.h"
+#import "CCRequestOperation.h"
 
-@implementation CKRequestManager
+@implementation CCRequestManager
 
 - (id)init {
 	self = [super init];
@@ -21,14 +21,14 @@
 }
 
 + (id)sharedManager {
-	static CKRequestManager * defaultManager = nil;
+	static CCRequestManager * defaultManager = nil;
 	if (defaultManager == nil) {
-		defaultManager = [[CKRequestManager alloc] init];
+		defaultManager = [[CCRequestManager alloc] init];
 	}
 	return defaultManager;
 }
 
-- (void)processRequestOperation:(CKRequestOperation *)operation {
+- (void)processRequestOperation:(CCRequestOperation *)operation {
 	[operationQueue addOperation:operation];
 }
 

@@ -1,15 +1,15 @@
 //
-//  CKDictionarizerEngine.h
-//  CloudKit
+//  CCDictionarizerEngine.h
+//  CoreCloud
 //
 //  Created by Ludovic Galabru on 5/20/10.
 //  Copyright 2010 scrumers. All rights reserved.
 //
 
 #import <Foundation/Foundation.h>
-#import "CKEngine.h"
+#import "CCEngine.h"
 
-@interface CKDictionarizerEngine : NSObject <CKEngine> {
+@interface CCDictionarizerEngine : NSObject <CCEngine> {
 	NSString *_localPrefix;
 }
 

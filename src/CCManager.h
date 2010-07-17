@@ -1,5 +1,5 @@
 //
-//  CKCloudKitManager.h
+//  CCManager.h
 //  Scrumers
 //
 //  Created by Ludovic Galabru on 25/07/09.
@@ -8,17 +8,17 @@
 
 #import <Foundation/Foundation.h>
 
-@protocol CKEngine;
+@protocol CCEngine;
 
-@interface CKCloudKitManager : NSObject {
+@interface CCManager : NSObject {
 	NSMutableArray *ordered_engines;
 	NSMutableDictionary *engines;
 	NSMutableDictionary *droppedEngines;
 }
 
-+ (CKCloudKitManager *)defaultConfiguration;
-- (void)addEngine:(NSObject<CKEngine> *)engine withKey:(NSString *)key;
-- (NSObject<CKEngine> *)engineForKey:(NSString *)key;
++ (CCManager *)defaultConfiguration;
+- (void)addEngine:(NSObject<CCEngine> *)engine withKey:(NSString *)key;
+- (NSObject<CCEngine> *)engineForKey:(NSString *)key;
 - (void)dropEngineWithKey:(NSString *)key;
 - (void)restaureDroppedEngines;
 

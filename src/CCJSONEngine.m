@@ -1,16 +1,16 @@
 
 //
-//  CKJSONEngine.m
-//  CloudKit
+//  CCJSONEngine.m
+//  CoreCloud
 //
 //  Created by Ludovic Galabru on 08/04/10.
 //  Copyright 2010 Software Engineering Task Force. All rights reserved.
 //
 
-#import "CKJSONEngine.h"
+#import "CCJSONEngine.h"
 #import "TouchJSON/TouchJSON.h"
 
-@interface CKJSONEngine (Private)
+@interface CCJSONEngine (Private)
 
 - (NSString *)serializeObject:(id)inObject;
 - (NSString *)serializeArray:(NSArray *)inArray;
@@ -22,7 +22,7 @@
 
 @end
 
-@implementation CKJSONEngine
+@implementation CCJSONEngine
 
 
 - (void)processRequest:(NSMutableURLRequest **)request withParams:(NSMutableDictionary **)params {

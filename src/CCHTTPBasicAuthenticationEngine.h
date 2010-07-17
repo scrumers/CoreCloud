@@ -8,9 +8,9 @@
 
 #import <Foundation/Foundation.h>
 
-#import "CKEngine.h"
+#import "CCEngine.h"
 
-@interface CKHTTPBasicAuthenticationEngine : NSObject<CKEngine> {
+@interface CCHTTPBasicAuthenticationEngine : NSObject<CCEngine> {
 	NSString *_username, *_password, *_basic_authorization;
 }
 
